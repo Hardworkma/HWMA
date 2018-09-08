@@ -443,6 +443,11 @@ and (max-device-width : 667px) {
     .card {
         width: 400px;
     }
+
+    .ig-feed {
+        width: 300px;
+        margin-left: 20px;
+    }
 }
 
 /*

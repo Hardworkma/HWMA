@@ -30,9 +30,9 @@ export default class HomePage extends React.PureComponent {
                         <Twitter/>
                     </div>
                 </Row>
-                {/*<div className={'ig-feed'}>*/}
-                    {/*<Instagram />*/}
-                {/*</div>*/}
+                <div className={'ig-feed'}>
+                    <Instagram />
+                </div>
             </div>
         )
     }
