@@ -48,7 +48,7 @@ class App extends Component {
                     {/*<Route path="/schedule" component={SchedulePage}/>*/}
                     {/*<Route path="/taekwondo" component={TaekwondoPage}/>*/}
                     {/*<Route path="/welcome" component={WelcomePage}/>*/}
-                    {/*<Footer/>*/}
+                    <Footer/>
                 </Container>
             </Router>
         );

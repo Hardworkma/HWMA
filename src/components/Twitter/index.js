@@ -3,6 +3,10 @@ import { Timeline } from 'react-twitter-widgets'
 
 export default class Twitter extends React.PureComponent {
     render() {
+        let width = '500';
+        if(window.innerWidth > 375 && window.innerWidth < 667 ) {
+            width = '850'
+        }
         return(
             <Timeline
                 dataSource={{
@@ -12,7 +16,7 @@ export default class Twitter extends React.PureComponent {
                 options={{
                     username: 'HardWorkMarArts',
                     height: '400',
-                    width: '500',
+                    width: {width},
                     'chrome': 'noheader nofooter'
                 }}
 

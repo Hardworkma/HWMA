@@ -6,9 +6,6 @@ import Address from "../Address";
 
 export default class Footer extends React.PureComponent {
     render() {
-        let fb_style = {left:'42%'};
-        let twitter_style = {left:'47%'}
-        let ig_style = {left:'53%'}
         return(
             <div id='footer' className={'footer'}>
                 <Row  >
@@ -17,9 +14,9 @@ export default class Footer extends React.PureComponent {
                         <img src={Logo} />
                     </div>
                     <div>
-                        <SocialMediaLink type={'facebook'} style={fb_style} URL={'http://www.facebook.com/HardWorkMA'}/>
-                        <SocialMediaLink type={'twitter'} style={twitter_style} URL={'http://twitter.com/HardWorkMarArts'}/>
-                        <SocialMediaLink type={'instagram'} style={ig_style} URL={'http://www.instagram.com/hardworkma/'}/>
+                        <SocialMediaLink className={'fab social-link fa-2x fa-facebook-f social-link-fb'} URL={'http://www.facebook.com/HardWorkMA'}/>
+                        <SocialMediaLink className={'fab social-link fa-2x fa-twitter social-link-twitter'} URL={'http://twitter.com/HardWorkMarArts'}/>
+                        <SocialMediaLink className={'fab social-link fa-2x fa-instagram social-link-ig'} URL={'http://www.instagram.com/hardworkma/'}/>
                     </div>
                     <Address />
                 </Row>

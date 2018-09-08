@@ -13,7 +13,7 @@ export default class HomePage extends React.PureComponent {
 
         return (
             <div>
-                {/*<FreeTrial/>*/}
+                <FreeTrial/>
                 <Row className={'home'}>
                     <Home/>
                 </Row>
