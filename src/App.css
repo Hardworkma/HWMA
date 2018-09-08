@@ -427,7 +427,7 @@ mobile
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
-    .header {
+    .header .home {
         width: 400px;
     }
 
@@ -435,9 +435,9 @@ and (max-device-width : 667px) {
         max-width: 350px
     }
 
-    .home {
-        width: 400px;
-    }
+    /*.home {*/
+        /*width: 400px;*/
+    /*}*/
 
     #blackbelt.container {
         font-size: 24px;
@@ -454,14 +454,15 @@ tablet
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)  {
-    .header {
+    .header .home {
         min-width: 480px;
         margin-left: -45px;
     }
 
-    .home {
-        min-width: 450px;
-    }
+    /*.home {*/
+        /*min-width: 480px;*/
+        /*margin-left: -45px;*/
+    /*}*/
 
     #blackbelt.container {
         font-size: 32px;
