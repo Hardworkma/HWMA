@@ -52,9 +52,9 @@ export default class Header extends React.PureComponent {
         let styleResources = (this.state.showResources)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
         return (
             <Row className={'header'}>
-                <Col >
-                    <Link to={"/"}><img className={'logo'} src={Logo} /></Link>
-                </Col>
+                {/*<Col >*/}
+                    {/*<Link to={"/"}><img className={'logo'} src={Logo} /></Link>*/}
+                {/*</Col>*/}
             </Row>
         )
     }

@@ -5,13 +5,6 @@
     src: url('./fonts/futura_book_font.ttf');
 }
 
-/*.logo {*/
-    /*width: 230px;*/
-    /*height: 140px;*/
-    /*margin-top:10px;*/
-    /*margin-left:120px*/
-/*}*/
-
 .logo {
     height: 140px;
     marginTop:10px;
@@ -421,4 +414,24 @@ div.menu {
 
 .slick-prev:before, .slick-next:before {
     color: black !important;
+}
+
+/*
+mobile
+ */
+@media only screen and (max-width: 360px) {
+    [class*="header"] {
+        width: 100%;
+        min-width: 360px;
+    }
+}
+
+/*
+tablet
+ */
+@media only screen and (max-width: 775px) {
+    [class*="header"] {
+        width: 100%;
+        min-width: 760px;
+    }
 }
