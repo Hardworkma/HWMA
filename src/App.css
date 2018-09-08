@@ -291,9 +291,6 @@ li.menu-item {
     cursor: pointer;
 }
 
-img.review {
-
-}
 .responsive {
     max-width: 100%;
     height: auto;
@@ -435,16 +432,16 @@ and (max-device-width : 667px) {
         max-width: 350px
     }
 
-    /*.home {*/
-        /*width: 400px;*/
-    /*}*/
-
     #blackbelt.container {
         font-size: 24px;
     }
 
     #blackbelt-img {
         max-width: 285px;
+    }
+
+    .card {
+        width: 400px;
     }
 }
 
@@ -459,12 +456,11 @@ and (max-device-width : 1024px)  {
         margin-left: -45px;
     }
 
-    /*.home {*/
-        /*min-width: 480px;*/
-        /*margin-left: -45px;*/
-    /*}*/
-
     #blackbelt.container {
         font-size: 32px;
+    }
+
+    .card {
+        width: 100%;
     }
 }
