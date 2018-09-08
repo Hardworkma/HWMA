@@ -34,7 +34,7 @@
     opacity: .4;
 }
 
-.home_2 {
+.home {
     background-color: black;
     max-height: 300px;
 }
@@ -424,6 +424,11 @@ mobile
         width: 100%;
         min-width: 360px;
     }
+
+    [class*="home"] {
+        width: 100%;
+        min-width: 360px;
+    }
 }
 
 /*
@@ -434,5 +439,10 @@ tablet
         width: 100%;
         min-width: 775px;
         margin-left: -45px;
+    }
+
+    [class*="home"] {
+        width: 100%;
+        min-width: 775px;
     }
 }

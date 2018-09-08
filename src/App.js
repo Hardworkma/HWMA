@@ -34,7 +34,7 @@ class App extends Component {
             <Router >
                 <Container className={'container-fluid'}>
                     <Header />
-                    {/*<Route exact path="/" component={HomePage} />*/}
+                    <Route exact path="/" component={HomePage} />
                     {/*<Route path="/about" component={About}/>*/}
                     {/*<Route path="/core" component={CoreValuesPage}/>*/}
                     {/*<Route path="/afterschool" component={AfterschoolPage}/>*/}
