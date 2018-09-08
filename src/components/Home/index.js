@@ -6,7 +6,7 @@ export default class Home extends React.PureComponent {
     render() {
         return(
             <div id='blackbelt' className={'container'}>
-                <img src={Blackbelt} alt={"black belt"} style={{maxHeight:'300px', marginRight:'25%'}}/>
+                <img id='blackbelt-img' src={Blackbelt} alt={"black belt"}/>
                 <div className={'container-center'}>EARN IT.</div>
             </div>
         )

@@ -53,7 +53,7 @@ export default class Header extends React.PureComponent {
         return (
             <Row className={'header'}>
                 <Col >
-                    <Link to={"/"}><img className={'logo'} src={Logo} /></Link>
+                    <Link to={"/"}><img id='logo' className={'logo'} src={Logo} /></Link>
                 </Col>
             </Row>
         )

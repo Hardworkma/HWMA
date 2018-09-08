@@ -48,6 +48,11 @@
     height: 225px;
 }
 
+#blackbelt-img {
+    max-height: 300px;
+    margin-right: 25%;
+}
+
 .container .container-center {
     position: absolute;
     top: 50%;
@@ -419,30 +424,46 @@ div.menu {
 /*
 mobile
  */
-@media only screen and (max-width: 360px) {
-    [class*="header"] {
-        width: 100%;
-        min-width: 360px;
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+    .header {
+        width: 400px;
     }
 
-    [class*="home"] {
-        width: 100%;
-        min-width: 360px;
+    #logo {
+        max-width: 350px
+    }
+
+    .home {
+        width: 400px;
+    }
+
+    #blackbelt.container {
+        font-size: 24px;
+    }
+
+    #blackbelt-img {
+        max-width: 285px;
     }
 }
 
 /*
 tablet
  */
-@media only screen and (max-width: 775px) {
-    [class*="header"] {
-        width: 100%;
-        min-width: 775px;
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+    .header {
+        min-width: 480px;
         margin-left: -45px;
     }
 
-    [class*="home"] {
-        width: 100%;
-        min-width: 775px;
+    .home {
+        min-width: 450px;
+    }
+
+    #blackbelt.container {
+        font-size: 32px;
     }
 }
