@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import {Container, Col, Row} from 'reactstrap'
+import {Container} from 'reactstrap'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import './App.css';
 import './styles/app.scss'
 
 import Header from "./components/Header/index";
-import Menu from "./components/Menu/index";
 import Footer from './components/Footer/index';
 
 
@@ -24,47 +23,36 @@ import PhilosophyPage from "./containers/PhilosophyPage";
 import SafeSportPage from "./containers/SafeSportPage";
 import HardWorkHerosPage from "./containers/HardWorkHerosPage";
 import FAQPage from "./containers/FAQPage";
-import Reviews from "./containers/ReviewsPage/index";
 
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            layout: 0,
-
-        };
     }
-
-
     render() {
-// let selectedLayout = <Header_DEFAULT/>
-// let defaultMenu = <Menu onChange={this.changeLayout} layout={this.state.layout}/>
-    return (
-        <Router >
-            <Container className={'container-fluid'}>
-                <Header />
-                <Route exact path="/" component={HomePage} />
-                <Route path="/about" component={About}/>
-                <Route path="/core" component={CoreValuesPage}/>
-                <Route path="/afterschool" component={AfterschoolPage}/>
-                <Route path="/camp" component={CampPage}/>
-                <Route path="/faq" component={FAQPage}/>
-                <Route path="/hardworkheros" component={HardWorkHerosPage}/>
-                <Route path="/philosophy" component={PhilosophyPage}/>
-                <Route path="/reviews" component={ReviewsPage}/>
-                <Route path="/safesport" component={SafeSportPage}/>
-                <Route path="/sidekicks" component={SideKicksPage}/>
-                <Route path="/schedule" component={SchedulePage}/>
-                <Route path="/taekwondo" component={TaekwondoPage}/>
-                <Route path="/welcome" component={WelcomePage}/>
-                <Footer/>
-
-            </Container>
-
-        </Router>
-    );
-  }
+        return (
+            <Router >
+                <Container className={'container-fluid'}>
+                    <Header />
+                    <Route exact path="/" component={HomePage} />
+                    <Route path="/about" component={About}/>
+                    <Route path="/core" component={CoreValuesPage}/>
+                    <Route path="/afterschool" component={AfterschoolPage}/>
+                    <Route path="/camp" component={CampPage}/>
+                    <Route path="/faq" component={FAQPage}/>
+                    <Route path="/hardworkheros" component={HardWorkHerosPage}/>
+                    <Route path="/philosophy" component={PhilosophyPage}/>
+                    <Route path="/reviews" component={ReviewsPage}/>
+                    <Route path="/safesport" component={SafeSportPage}/>
+                    <Route path="/sidekicks" component={SideKicksPage}/>
+                    <Route path="/schedule" component={SchedulePage}/>
+                    <Route path="/taekwondo" component={TaekwondoPage}/>
+                    <Route path="/welcome" component={WelcomePage}/>
+                    <Footer/>
+                </Container>
+            </Router>
+        );
+    }
 }
 
 
