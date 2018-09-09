@@ -35,19 +35,19 @@ class App extends Component {
                 <Container className={'container-fluid'}>
                     <Header />
                     <Route exact path="/" component={HomePage} />
-                    {/*<Route path="/about" component={About}/>*/}
-                    {/*<Route path="/core" component={CoreValuesPage}/>*/}
-                    {/*<Route path="/afterschool" component={AfterschoolPage}/>*/}
-                    {/*<Route path="/camp" component={CampPage}/>*/}
-                    {/*<Route path="/faq" component={FAQPage}/>*/}
-                    {/*<Route path="/hardworkheros" component={HardWorkHerosPage}/>*/}
-                    {/*<Route path="/philosophy" component={PhilosophyPage}/>*/}
-                    {/*<Route path="/reviews" component={ReviewsPage}/>*/}
-                    {/*<Route path="/safesport" component={SafeSportPage}/>*/}
-                    {/*<Route path="/sidekicks" component={SideKicksPage}/>*/}
-                    {/*<Route path="/schedule" component={SchedulePage}/>*/}
-                    {/*<Route path="/taekwondo" component={TaekwondoPage}/>*/}
-                    {/*<Route path="/welcome" component={WelcomePage}/>*/}
+                    <Route path="/about" component={About}/>
+                    <Route path="/core" component={CoreValuesPage}/>
+                    <Route path="/afterschool" component={AfterschoolPage}/>
+                    <Route path="/camp" component={CampPage}/>
+                    <Route path="/faq" component={FAQPage}/>
+                    <Route path="/hardworkheros" component={HardWorkHerosPage}/>
+                    <Route path="/philosophy" component={PhilosophyPage}/>
+                    <Route path="/reviews" component={ReviewsPage}/>
+                    <Route path="/safesport" component={SafeSportPage}/>
+                    <Route path="/sidekicks" component={SideKicksPage}/>
+                    <Route path="/schedule" component={SchedulePage}/>
+                    <Route path="/taekwondo" component={TaekwondoPage}/>
+                    <Route path="/welcome" component={WelcomePage}/>
                     <Footer/>
                 </Container>
             </Router>

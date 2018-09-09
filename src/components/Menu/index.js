@@ -1,96 +1,130 @@
 import React from 'react';
-import { Label, Input, Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink, Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom'
+import {Col, Row} from 'reactstrap'
+
+import Icon from '../../images/icon-orange.png'
+import Kick from '../../images/kick-orange.png'
+import MasterCharles from '../../images/master_charles.jpg';
+import BeltIcon from '../../images/belt-icon.png'
+import GreenIcon from '../../images/green-icon.png'
+import Map from '../../components/Map/index'
+import MenuItem from "../MenuItem";
+import InfoLinks from "../InfoLinks";
+import ProgramLinks from "../ProgramLinks";
+
 
 export default class Menu extends React.PureComponent {
     constructor(props) {
         super(props);
+        this.state = {
+            showAbout: false,
+            showResources: false,
+        }
 
+        this.showAbout = this.showAbout.bind(this);
+        this.hideAbout = this.hideAbout.bind(this);
+        this.showResources = this.showResources.bind(this);
+        this.hideResources = this.hideResources.bind(this);
+        this.menuClick = this.menuClick.bind(this);
 
     }
 
+    showAbout() {
+        this.setState({showAbout:true});
+    }
 
+    hideAbout() {
+        this.setState({showAbout:false});
+    }
+    showResources() {
+        this.setState({showResources:true});
+    }
+
+    hideResources() {
+        this.setState({showResources:false});
+    }
+    menuClick() {
+        this.hideAbout();
+        this.hideResources();
+    }
 
     render() {
+        let styleAbout = (this.state.showAbout)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
+        let styleResources = (this.state.showResources)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
         return (
-            <Row className={'menu'}>
-                <Col xs={"4"}>
-                    <Input type="select" name="program" id="program" onChange={this.changeLayout}>
-                        <option value={'0'}>Layout Default</option>
-                        <option value={'1'} >Layout 1</option>
-                    </Input>
-                </Col>
-                <Col xs={"8"}>
-                    <Nav className={'menu'}>
-                        <NavItem className={"menu-item"}>
-                            <Link className={"menu-link"} to="/">Home</Link>
-                        </NavItem>
-                        <Dropdown nav isOpen={this.state.aboutOpen} toggle={this.toggleAbout}>
-                            <DropdownToggle nav caret className={"menu-link"}>
-                                About
-                            </DropdownToggle>
-                            <DropdownMenu>
-                                <DropdownItem><Link className={"menu-link"} to="/welcome">Welcome Letter</Link></DropdownItem>
-                                <DropdownItem><Link className={"menu-link"} to="/core">Core Values</Link></DropdownItem>
-                                <DropdownItem><Link className={"menu-link"} to="/reviews">Reviews</Link></DropdownItem>
-                                <DropdownItem><Link className={"menu-link"} to="/philosophy">Philosophy</Link></DropdownItem>
-                                <DropdownItem><Link className={"menu-link"} to="/safesport">SafeSport</Link></DropdownItem>
-                            </DropdownMenu>
-                        </Dropdown>
-                        <Dropdown nav isOpen={this.state.programOpen} toggle={this.togglePrograms}>
-                            <DropdownToggle nav className={"menu-link"} caret>
-                                Programs
-                            </DropdownToggle>
-                            <DropdownMenu>
-                                <DropdownItem><Link className={"menu-link"} to="/taekwondo">Taekwondo (6+ y/o)</Link></DropdownItem>
-                                <DropdownItem><Link className={"menu-link"} to="/hardworkheros">Hard Work Heros (4-6 y/o)</Link></DropdownItem>
-                                <DropdownItem><Link className={"menu-link"} to="/sidekicks">Sidekicks (3-4 y/o)</Link></DropdownItem>
-                                <DropdownItem><Link className={"menu-link"} to="/afterschool">Afterschool Program</Link></DropdownItem>
-                                <DropdownItem><Link className={"menu-link"} to="/camp">Camp Program</Link></DropdownItem>
-                            </DropdownMenu>
-                        </Dropdown>
-                        <NavItem className={"menu-item"}>
-                            <Link className={"menu-link"} to="/schedule">Schedule</Link>
-                        </NavItem>
-                        <NavItem className={"menu-item"}>
-                            <Link className={"menu-link"} to="/faq">FAQ</Link>
-                        </NavItem>
-                    </Nav>
-                </Col>
-            </Row>
+            <div className={'links text-right to-right'}>
+                <ul className={'links-menu horizontal list-inline'}>
+                    <li className={'header-link list-inline-item'}>
+                        <a href={'#'} onMouseEnter={this.showAbout} onMouseLeave={this.hideAbout} className={'no-underline'}>
+                            Information <i className="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <div className={'sub-menu'} style={styleAbout} onMouseEnter={this.showAbout} onMouseLeave={this.hideAbout}>
+
+                            <Row>
+                                <Col xs={'6'}>
+                                    <div className={'sub-menu-address'}>
+                                        46950 Community Plaza
+                                        Sterling, Virginia 20164<br/>
+                                    </div>
+                                    <div className={'sub-menu-phone'}>
+                                        (571) 455-9071
+                                    </div>
+                                    <div className={'sub-menu-email'}>
+                                        hardworkma@gmail.com
+                                    </div>
+                                    <Map/>
+                                </Col>
+                                <Col xs={'3'} >
+                                    <div className={'sub-menu-container'}>
+                                        <img src={Icon} alt={'HWMA logo'} style={{paddingLeft:'90px', paddingBottom:'20px'}}/> <br/>
+                                        <div className={'sub-menu-title'}><span style={{marginLeft:'62px'}}>Information</span></div>
+                                        <InfoLinks menuClick={this.menuClick}/>
+                                    </div>
+                                </Col>
+                                <Col xs={'3'}>
+                                    <div className={'sub-menu-container'}>
+                                        <img src={Kick} alt={'HWMA logo'} style={{paddingLeft:'90px', paddingBottom:'20px'}}/> <br/>
+                                        <div className={'sub-menu-title'}><span style={{marginLeft:'62px'}}>Programs</span></div>
+                                        <ProgramLinks menuClick={this.menuClick}/>
+                                    </div>
+                                </Col>
+                            </Row>
+
+                        </div>
+                    </li>
+                    <li className={'header-link list-inline-item'}>
+                        <a href={'#'} onMouseEnter={this.showResources} onMouseLeave={this.hideResources} className={'no-underline'}>
+                            Resources <i className="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <div className={'sub-menu'} style={styleResources} onMouseEnter={this.showResources} onMouseLeave={this.hideResources}>
+
+                            <Row>
+                                <Col xs={'6'}>
+                                    <img src={MasterCharles} style={{marginLeft:'30%'}}/>
+                                </Col>
+                                <Col xs={'3'}>
+                                    <div className={'sub-menu-container'}>
+                                        <img src={GreenIcon} alt={'Green Belt'} style={{paddingLeft:'45px', paddingBottom:'20px'}}/> <br/>
+                                        <div className={'sub-menu-title'}><span style={{marginLeft:'62px'}}>Color Belts</span></div>
+                                        <MenuItem path={'#'} title={'Curriculum'} />
+                                        <MenuItem path={'#'} title={'Terminology'} />
+                                        <MenuItem path={'#'} title={'Form Videos'} />
+                                    </div>
+                                </Col>
+                                <Col xs={'3'}>
+                                    <div className={'sub-menu-container'}>
+                                        <img src={BeltIcon} alt={'Black Belt'} style={{paddingLeft:'45px', paddingBottom:'20px'}}/> <br/>
+                                        <div className={'sub-menu-title'}><span style={{marginLeft:'62px'}}>Black Belts</span></div>
+                                        <MenuItem path={'#'} title={'Curriculum'} />
+                                        <MenuItem path={'#'} title={'Terminology'} />
+                                        <MenuItem path={'#'} title={'Form Videos'} />
+                                    </div>
+                                </Col>
+                            </Row>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
         )
     }
 }
-
-{/*<Row className={'menu'}>*/}
-    {/*<Col xs={"4"}>*/}
-
-    {/*</Col>*/}
-    {/*<Col xs={"1"}>*/}
-        {/*<Link to="/">Home</Link>*/}
-    {/*</Col>*/}
-    {/*<Col xs={"1"}>*/}
-        {/*<Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>*/}
-            {/*<DropdownToggle nav caret>*/}
-                {/*About*/}
-            {/*</DropdownToggle>*/}
-            {/*<DropdownMenu>*/}
-                {/*<DropdownItem>Welcome Letter</DropdownItem>*/}
-                {/*<DropdownItem>Core Values</DropdownItem>*/}
-                {/*<DropdownItem>Reviews</DropdownItem>*/}
-            {/*</DropdownMenu>*/}
-        {/*</Dropdown>*/}
-    {/*</Col>*/}
-    {/*<Col xs={"1"}>*/}
-        {/*<Link to="/welcome">Welcome</Link>*/}
-    {/*</Col>*/}
-    {/*<Col xs={"2"}>*/}
-        {/*Student Resources*/}
-    {/*</Col>*/}
-    {/*<Col xs={"1"}>*/}
-        {/*Schedule*/}
-    {/*</Col>*/}
-    {/*<Col xs={"2"}>*/}
-        {/*Contact Us*/}
-    {/*</Col>*/}
-{/*</Row>*/}
