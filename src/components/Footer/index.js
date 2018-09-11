@@ -18,7 +18,11 @@ export default class Footer extends React.PureComponent {
                         <SocialMediaLink className={'fab social-link fa-2x fa-twitter social-link-twitter'} URL={'http://twitter.com/HardWorkMarArts'}/>
                         <SocialMediaLink className={'fab social-link fa-2x fa-instagram social-link-ig'} URL={'http://www.instagram.com/hardworkma/'}/>
                     </div>
-                    <Address />
+                    <Address containerClass={'footer-address-container'}
+                             addClass={'footer-address'}
+                             add1Class={'footer-address-1'}
+                             phoneClass={'footer-phone'}
+                             emailClass={'footer-email'}/>
                 </Row>
             </div>
 

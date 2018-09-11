@@ -192,8 +192,14 @@
 
 .sub-menu-address {
     position: relative;
-    left: 18%;
+    left: 32%;
 }
+
+.sub-menu-address1 {
+    position: relative;
+    left: 33%;
+}
+
 .sub-menu-phone {
     position: relative;
     left: 38%;
@@ -469,6 +475,26 @@ and (max-device-width : 667px) {
         margin-left: 15px;
         margin-right: 15px;
     }
+    .sub-menu-address {
+        position: relative;
+        left: 18%;
+    }
+
+    .sub-menu-address1 {
+        position: relative;
+        left: 19%;
+    }
+
+    .sub-menu-phone {
+        position: relative;
+        left: 28%;
+    }
+
+    .sub-menu-email {
+        position: relative;
+        left: 18%;
+    }
+
 
     .card {
         margin-top: 5px;

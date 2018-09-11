@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Container} from 'reactstrap'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 
 import './App.css';
 import './styles/app.scss'

@@ -3,13 +3,14 @@ import {Col, Row} from 'reactstrap'
 
 import Icon from '../../images/icon-orange.png'
 import Kick from '../../images/kick-orange.png'
-import MasterCharles from '../../images/master_charles.jpg';
+import KidKick from '../../images/kick.png';
 import BeltIcon from '../../images/belt-icon.png'
 import GreenIcon from '../../images/green-icon.png'
 import Map from '../../components/Map/index'
 import MenuItem from "../MenuItem";
 import InfoLinks from "../InfoLinks";
 import ProgramLinks from "../ProgramLinks";
+import Address from "../Address";
 
 
 export default class Menu extends React.PureComponent {
@@ -61,17 +62,11 @@ export default class Menu extends React.PureComponent {
 
                             <Row>
                                 <Col xs={'6'}>
-                                    <div className={'sub-menu-address'}>
-                                        46950 Community Plaza
-                                        Sterling, Virginia 20164<br/>
-                                    </div>
-                                    <div className={'sub-menu-phone'}>
-                                        (571) 455-9071
-                                    </div>
-                                    <div className={'sub-menu-email'}>
-                                        hardworkma@gmail.com
-                                    </div>
-                                    <Map/>
+                                    <Address addClass={'sub-menu-address'}
+                                             add1Class={'sub-menu-address1'}
+                                             phoneClass={'sub-menu-phone'}
+                                             emailClass={'sub-menu-email'}/>
+                                    <Map loadingElementHeight={'100%'} mapElementHeight={'100%'} containerElementHeight={'300px'}/>
                                 </Col>
                                 <Col xs={'3'} >
                                     <div className={'sub-menu-container'}>
@@ -99,7 +94,7 @@ export default class Menu extends React.PureComponent {
 
                             <Row>
                                 <Col xs={'6'}>
-                                    <img src={MasterCharles} style={{marginLeft:'30%'}}/>
+                                    <img src={KidKick} style={{marginLeft:'30%', marginTop:'10%'}}/>
                                 </Col>
                                 <Col xs={'3'}>
                                     <div className={'sub-menu-container'}>

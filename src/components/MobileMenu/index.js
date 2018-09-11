@@ -4,6 +4,8 @@ import CollapsingCard from "../CollapsingCard";
 import MenuItem from "../MenuItem";
 import InfoLinks from "../InfoLinks";
 import ProgramLinks from "../ProgramLinks";
+import Map from "../Map";
+import Address from "../Address";
 
 export default class MobileMenu extends React.PureComponent {
     constructor(props) {
@@ -35,7 +37,13 @@ export default class MobileMenu extends React.PureComponent {
             menuText = 'Menu'
             menuStyle = {width: '0px'}
         }
-
+        let contact = <div>
+                        <Address addClass={'sub-menu-address'}
+                                 add1Class={'sub-menu-address1'}
+                                 phoneClass={'sub-menu-phone'}
+                                 emailClass={'sub-menu-email'}/>
+                        <Map loadingElementHeight={'100%'} mapElementHeight={'100%'} containerElementHeight={'300px'}/>
+                    </div>
         return (
             <Container id={'mobile-header'} className={'mobile-header pull-left'}>
                 <Row>
@@ -46,7 +54,7 @@ export default class MobileMenu extends React.PureComponent {
                 <Row className={menuClass} style={menuStyle}>
                     <CollapsingCard cardClass={'mobile-menu-card'} title={'Information'} titleClass={''} body={<InfoLinks menuClick={this.toggleMenu}/>}/>
                     <CollapsingCard cardClass={'mobile-menu-card'} title={'Programs'} titleClass={''} body={<ProgramLinks menuClick={this.toggleMenu}/>}/>
-                    <CollapsingCard cardClass={'mobile-menu-card'} title={'Contact Us'} titleClass={''} body={''}/>
+                    <CollapsingCard cardClass={'mobile-menu-card'} title={'Contact Us'} titleClass={''} body={contact}/>
                 </Row>
             </Container>
         )

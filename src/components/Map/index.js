@@ -49,9 +49,9 @@ export default class Map extends React.Component{
             <MyMapComponent
                 isMarkerShown
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFFB1-_iLLfGC5OONbBQknbyixNhCAsrQ"
-                loadingElement={<div style={{ height: `100%` }} />}
-                containerElement={<div style={{ height: `300px` }} />}
-                mapElement={<div style={{ height: `100%` }} />}
+                loadingElement={<div style={{ height: this.props.loadingElementHeight }} />}
+                containerElement={<div style={{ height: this.props.containerElementHeight }} />}
+                mapElement={<div style={{ height: this.props.mapElementHeight }} />}
             />
 
         )
