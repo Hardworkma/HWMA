@@ -6,16 +6,17 @@ import Philosophy from "../Philosophy";
 
 export default class About extends React.PureComponent {
     render() {
+        let classes = (window.innerWidth < 400) ? 'card card-text' :  'card card-double card-text'
         return(
             <div>
                 <Row className={'wrapper'}>
-                    <div className={'card card-double card-text'} style={{marginLeft:'2%'}}>
-                        <Title title={'Core Values'} layout={this.props.layout}/>
+                    <div className={classes} style={{marginLeft:'2%'}}>
+                        <Title title={'Core Values'}/>
                         <br/>
                         <CoreValues/>
                     </div>
-                    <div className={'card card-double card-text'}>
-                        <Title title={'Philosophy'} layout={this.props.layout}/>
+                    <div className={classes}>
+                        <Title title={'Philosophy'}/>
                         <br/>
                         <Philosophy/>
                     </div>

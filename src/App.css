@@ -440,6 +440,11 @@ and (max-device-width : 667px) {
         overflow: hidden;
     }
 
+    #program {
+        width: 94%;
+        margin-left: 6%;
+    }
+
     #logo {
         max-width: 350px;
         margin-left: -10%;
@@ -501,6 +506,12 @@ and (max-device-width : 667px) {
         margin-bottom: 5px;
     }
 
+    .faq-card {
+        margin-right: 2%;
+        margin-left: 2%;
+        width: 95%;
+    }
+
     #blackbelt.container {
         font-size: 24px;
     }
@@ -509,9 +520,9 @@ and (max-device-width : 667px) {
         max-width: 285px;
     }
 
-    /*.card {*/
-        /*width: 400px;*/
-    /*}*/
+    .core-values-list {
+        margin-left: 5%;
+    }
 
     .ig-feed {
         width: 300px;
