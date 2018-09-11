@@ -315,7 +315,7 @@ li.menu-item {
     height:30px;
     width:30px;
     position:absolute;
-    bottom:10px;
+    bottom:5px;
     color: black;
 }
 
@@ -386,7 +386,7 @@ li.menu-item {
 }
 
 #footer {
-    min-height: 190px;
+    min-height: 180px;
     background-color: #EBEBEB;
     margin-top: 100px;
     background: radial-gradient(circle at center top, #F9F9F9, #ccc);
@@ -464,6 +464,12 @@ and (max-device-width : 667px) {
         left: 100vw;
         visibility: hidden;
         opacity: 0;
+    }
+
+
+    .mobile-menu-title {
+        margin-left: 2%;
+        font-weight: lighter;
     }
 
     .mobile-menu.is-active {

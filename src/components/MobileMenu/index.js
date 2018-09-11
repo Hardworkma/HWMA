@@ -30,11 +30,11 @@ export default class MobileMenu extends React.PureComponent {
         if(this.state.toggleMenu) {
             menuClass += ' is-active';
             iconClass += ' fas fa-times'
-            menuText = 'Close'
+            menuText = '  Close'
             menuStyle = {marginLeft: '0px'}
         } else {
             iconClass += ' fas fa-bars hamburger'
-            menuText = 'Menu'
+            menuText =  '  Menu'
             menuStyle = {width: '0px'}
         }
         let contact = <div>
@@ -48,13 +48,13 @@ export default class MobileMenu extends React.PureComponent {
             <Container id={'mobile-header'} className={'mobile-header pull-left'}>
                 <Row>
                 <div  onClick={this.toggleMenu}>
-                    <i className={iconClass}  >{menuText}</i>
+                    <i className={iconClass} style={{'fontSize': '24px'}} ><span className={'mobile-menu-text'}>{menuText}</span></i>
                 </div>
                 </Row>
                 <Row className={menuClass} style={menuStyle}>
-                    <CollapsingCard cardClass={'mobile-menu-card'} title={'Information'} titleClass={''} body={<InfoLinks menuClick={this.toggleMenu}/>}/>
-                    <CollapsingCard cardClass={'mobile-menu-card'} title={'Programs'} titleClass={''} body={<ProgramLinks menuClick={this.toggleMenu}/>}/>
-                    <CollapsingCard cardClass={'mobile-menu-card'} title={'Contact Us'} titleClass={''} body={contact}/>
+                    <CollapsingCard cardClass={'mobile-menu-card'} title={'Information'} titleClass={'mobile-menu-title'} body={<InfoLinks menuClick={this.toggleMenu}/>}/>
+                    <CollapsingCard cardClass={'mobile-menu-card'} title={'Programs'} titleClass={'mobile-menu-title'} body={<ProgramLinks menuClick={this.toggleMenu}/>}/>
+                    <CollapsingCard cardClass={'mobile-menu-card'} title={'Contact Us'} titleClass={'mobile-menu-title'} body={contact}/>
                 </Row>
             </Container>
         )
