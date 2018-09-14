@@ -18,6 +18,7 @@ export default class FreeTrial extends React.PureComponent {
         });
     }
     render() {
+        console.log(this.props.className + ' ***')
         return(
             <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                 <ModalHeader toggle={this.toggle}>FREE 2 Week Trial!</ModalHeader>

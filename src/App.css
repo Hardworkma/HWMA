@@ -7,8 +7,8 @@
 
 .logo {
     height: 140px;
-    marginTop:10px;
-    marginLeft:120px
+    margin-top:10px;
+    margin-left:120px
 }
 
 .header {
@@ -400,9 +400,14 @@ li.menu-item {
 
 #footer .footer-logo {
     width: 88px;
-    height: 140px;
+    /*height: 140px;*/
     margin-top: -44px;
     margin-left: 45%;
+}
+
+.footer-address-container {
+    margin-left: 53%;
+    margin-top: -50px;
 }
 
 .footer-address {
@@ -422,7 +427,7 @@ li.menu-item {
 
 
 div.menu {
-       border-bottom: black 1px solid;
+    border-bottom: black 1px solid;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -430,11 +435,417 @@ div.menu {
 }
 
 /*
-mobile
+
  */
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px) {
+and (max-device-width : 320px) {
+    .header .home .footer  {
+        width: 345px;
+        overflow: hidden;
+    }
+
+    .logo {
+        height: 140px;
+        margin-top:10px;
+        margin-left:-40px;
+        max-width: 320px;
+    }
+
+    .mobile-menu {
+        background-color: #F9F9F9;
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        left: 100vw;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .mobile-menu.is-active {
+        -webkit-transform: translate(-100vw);
+        -ms-transform: translate(-100vw);
+        transform: translate(-100vw);
+        visibility: visible;
+        opacity: 1;
+
+    }
+
+    .mobile-menu-title {
+        margin-left: 2%;
+        font-weight: lighter;
+    }
+
+    .mobile-menu-card {
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+
+    }
+
+    .sub-menu-address {
+        position: relative;
+        left: 14%;
+    }
+
+    .sub-menu-address1 {
+        position: relative;
+        left: 16.5%;
+    }
+
+    .sub-menu-phone {
+        position: relative;
+        left: 26%;
+    }
+
+    .sub-menu-email {
+        position: relative;
+        left: 15.5%;
+    }
+
+    .card {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: 320px;
+    }
+
+    .card-title {
+        margin-left: 5px;
+    }
+
+    #blackbelt-img {
+        max-width: 300px;
+
+    }
+
+    .faq-card {
+        width:300px !important;
+        margin-top: 5px !important;
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+
+    #footer {
+        height: 200px;
+        background-color: #EBEBEB;
+        margin-top: 100px;
+        background: radial-gradient(circle at center top, #F9F9F9, #ccc);
+    }
+
+    #footer .footer-logo {
+        width: 88px;
+        margin-top: -44px;
+        margin-left: 38%;
+    }
+
+    .footer-address-container {
+        width: 320px;
+        margin-left: 0px !important;
+        margin-top: 0px !important;
+    }
+
+    .footer-address {
+        margin-left: 21%;
+        margin-top: 0px;
+    }
+    .footer-address-1 {
+        margin-left: 22%;
+    }
+    .footer-phone {
+        margin-left: 34%;
+    }
+
+    .footer-email {
+        margin-left: 21%;
+    }
+
+    .social-link-fb {
+        left: 37%;
+    }
+
+    .social-link-twitter {
+        left: 47%;
+    }
+
+    .social-link-ig {
+        left: 60%;
+    }
+
+}
+
+/*
+
+ */
+@media only screen
+and (device-width : 360px) {
+    .header .home .footer  {
+        width: 345px;
+        overflow: hidden;
+    }
+
+    .logo {
+        height: 140px;
+        margin-top:10px;
+        margin-left:-40px;
+        max-width: 340px;
+    }
+
+    .mobile-menu {
+        background-color: #F9F9F9;
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        left: 100vw;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .mobile-menu.is-active {
+        -webkit-transform: translate(-100vw);
+        -ms-transform: translate(-100vw);
+        transform: translate(-100vw);
+        visibility: visible;
+        opacity: 1;
+
+    }
+
+    .mobile-menu-title {
+        margin-left: 2%;
+        font-weight: lighter;
+    }
+
+    .mobile-menu-card {
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+
+    }
+
+    .sub-menu-address {
+        position: relative;
+        left: 14%;
+    }
+
+    .sub-menu-address1 {
+        position: relative;
+        left: 16.5%;
+    }
+
+    .sub-menu-phone {
+        position: relative;
+        left: 26%;
+    }
+
+    .sub-menu-email {
+        position: relative;
+        left: 15.5%;
+    }
+
+    .card {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: 360px;
+    }
+
+    .card-title {
+        margin-left: 5px;
+    }
+
+    #blackbelt-img {
+        max-width: 340px;
+
+    }
+
+    .faq-card {
+        width:340px !important;
+        margin-top: 5px !important;
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+
+    #footer .footer-logo {
+        width: 88px;
+        margin-top: -44px;
+        margin-left: 40%;
+    }
+
+    .footer-address-container {
+        width: 360px;
+        margin-left: 8% !important;
+        margin-top: 0px !important;
+    }
+
+    .footer-address {
+        margin-left: 21%;
+        margin-top: 0px;
+    }
+    .footer-address-1 {
+        margin-left: 22%;
+    }
+    .footer-phone {
+        margin-left: 30%;
+    }
+
+    .footer-email {
+        margin-left: 21%;
+    }
+
+    .social-link-fb {
+        left: 37%;
+    }
+
+    .social-link-twitter {
+        left: 47%;
+    }
+
+    .social-link-ig {
+        left: 60%;
+    }
+}
+
+/*
+
+ */
+@media only screen
+and (device-width : 411px) {
+    .header .home .footer  {
+        width: 391px;
+        overflow: hidden;
+    }
+
+    .logo {
+        height: 140px;
+        margin-top:10px;
+        margin-left:-40px;
+        max-width: 391px;
+    }
+
+    .mobile-menu {
+        background-color: #F9F9F9;
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        left: 100vw;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .mobile-menu.is-active {
+        -webkit-transform: translate(-100vw);
+        -ms-transform: translate(-100vw);
+        transform: translate(-100vw);
+        visibility: visible;
+        opacity: 1;
+
+    }
+
+    .mobile-menu-title {
+        margin-left: 2%;
+        font-weight: lighter;
+    }
+
+    .mobile-menu-card {
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+
+    }
+
+    .sub-menu-address {
+        position: relative;
+        left: 14%;
+    }
+
+    .sub-menu-address1 {
+        position: relative;
+        left: 16.5%;
+    }
+
+    .sub-menu-phone {
+        position: relative;
+        left: 26%;
+    }
+
+    .sub-menu-email {
+        position: relative;
+        left: 15.5%;
+    }
+
+    .card {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: 411px;
+    }
+
+    .card-title {
+        margin-left: 5px;
+    }
+
+    #blackbelt-img {
+        max-width: 340px;
+
+    }
+
+    .faq-card {
+        width:391px !important;
+        margin-top: 5px !important;
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+
+    #footer .footer-logo {
+        width: 88px;
+        margin-top: -44px;
+        margin-left: 40%;
+    }
+
+    .footer-address-container {
+        width: 411px;
+        margin-left: 8% !important;
+        margin-top: 0px !important;
+    }
+
+    .footer-address {
+        margin-left: 21%;
+        margin-top: 0px;
+    }
+    .footer-address-1 {
+        margin-left: 22%;
+    }
+    .footer-phone {
+        margin-left: 30%;
+    }
+
+    .footer-email {
+        margin-left: 21%;
+    }
+
+    .social-link-fb {
+        left: 37%;
+    }
+
+    .social-link-twitter {
+        left: 47%;
+    }
+
+    .social-link-ig {
+        left: 60%;
+    }
+}
+
+
+
+/*
+iPhone 6, 6S, 7 and 8
+ */
+@media only screen
+and (device-width : 375px)
+and (device-width : 667px) {
     .header .home .footer  {
         width: 400px;
         overflow: hidden;
@@ -467,10 +878,10 @@ and (max-device-width : 667px) {
     }
 
 
-    .mobile-menu-title {
-        margin-left: 2%;
-        font-weight: lighter;
-    }
+    /*.mobile-menu-title {*/
+        /*margin-left: 2%;*/
+        /*font-weight: lighter;*/
+    /*}*/
 
     .mobile-menu.is-active {
         -webkit-transform: translate(-100vw);
@@ -540,7 +951,9 @@ and (max-device-width : 667px) {
     }
 
     .footer-address-container {
-        margin-top: -10%;
+        width: 375px;
+        margin-left: 0px !important;
+        margin-top: 10px !important;
     }
 
     .footer-address {

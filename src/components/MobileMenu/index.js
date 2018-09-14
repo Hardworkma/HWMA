@@ -35,7 +35,7 @@ export default class MobileMenu extends React.PureComponent {
         } else {
             iconClass += ' fas fa-bars hamburger'
             menuText =  '  Menu'
-            menuStyle = {width: '0px'}
+            //menuStyle = {width: '0px'}
         }
         let contact = <div>
                         <Address addClass={'sub-menu-address'}

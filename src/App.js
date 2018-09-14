@@ -30,6 +30,7 @@ class App extends Component {
         super(props);
     }
     render() {
+        console.log('width: ' + window.innerWidth)
         return (
             <Router >
                 <Container className={'container-fluid'}>
