@@ -845,7 +845,7 @@ iPhone 6, 6S, 7 and 8
  */
 @media only screen
 and (device-width : 375px)
-and (device-width : 667px) {
+and (device-height : 667px) {
     .header .home .footer  {
         width: 400px;
         overflow: hidden;
@@ -878,10 +878,10 @@ and (device-width : 667px) {
     }
 
 
-    /*.mobile-menu-title {*/
-        /*margin-left: 2%;*/
-        /*font-weight: lighter;*/
-    /*}*/
+    .mobile-menu-title {
+        margin-left: 2%;
+        font-weight: lighter;
+    }
 
     .mobile-menu.is-active {
         -webkit-transform: translate(-100vw);
@@ -926,6 +926,7 @@ and (device-width : 667px) {
     .faq-card {
         margin-right: 2%;
         margin-left: 2%;
+        margin-top: 5px !important;
         width: 95%;
     }
 
