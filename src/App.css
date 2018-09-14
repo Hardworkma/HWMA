@@ -365,6 +365,8 @@ li.menu-item {
     z-index: 1;
     border-top: black 1px solid;
     border-bottom: black 1px solid;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 .footer:before {
@@ -458,7 +460,7 @@ and (max-device-width : 320px) {
         z-index: 999;
         -webkit-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
-        left: 100vw;
+        left: 10vw;
         visibility: hidden;
         opacity: 0;
     }
@@ -466,7 +468,7 @@ and (max-device-width : 320px) {
     .mobile-menu.is-active {
         -webkit-transform: translate(-100vw);
         -ms-transform: translate(-100vw);
-        transform: translate(-100vw);
+        transform: translate(-10vw);
         visibility: visible;
         opacity: 1;
 
@@ -515,7 +517,7 @@ and (max-device-width : 320px) {
     }
 
     #blackbelt-img {
-        max-width: 300px;
+        max-width: 260px;
 
     }
 
@@ -525,6 +527,7 @@ and (max-device-width : 320px) {
         margin-left: 10px;
         margin-right: 5px;
     }
+
 
     #footer {
         height: 200px;
@@ -598,7 +601,7 @@ and (device-width : 360px) {
         z-index: 999;
         -webkit-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
-        left: 100vw;
+        left: 1vw;
         visibility: hidden;
         opacity: 0;
     }
@@ -606,7 +609,7 @@ and (device-width : 360px) {
     .mobile-menu.is-active {
         -webkit-transform: translate(-100vw);
         -ms-transform: translate(-100vw);
-        transform: translate(-100vw);
+        transform: translate(-1vw);
         visibility: visible;
         opacity: 1;
 
@@ -655,7 +658,7 @@ and (device-width : 360px) {
     }
 
     #blackbelt-img {
-        max-width: 340px;
+        max-width: 280px;
 
     }
 
@@ -730,7 +733,7 @@ and (device-width : 411px) {
         z-index: 999;
         -webkit-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
-        left: 100vw;
+        left: 10vw;
         visibility: hidden;
         opacity: 0;
     }
@@ -738,7 +741,7 @@ and (device-width : 411px) {
     .mobile-menu.is-active {
         -webkit-transform: translate(-100vw);
         -ms-transform: translate(-100vw);
-        transform: translate(-100vw);
+        transform: translate(-10vw);
         visibility: visible;
         opacity: 1;
 
@@ -787,7 +790,7 @@ and (device-width : 411px) {
     }
 
     #blackbelt-img {
-        max-width: 340px;
+        max-width: 330px;
 
     }
 
@@ -872,7 +875,7 @@ and (device-height : 667px) {
         z-index: 999;
         -webkit-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
-        left: 100vw;
+        left: 10vw;
         visibility: hidden;
         opacity: 0;
     }
@@ -886,7 +889,7 @@ and (device-height : 667px) {
     .mobile-menu.is-active {
         -webkit-transform: translate(-100vw);
         -ms-transform: translate(-100vw);
-        transform: translate(-100vw);
+        transform: translate(-10vw);
         visibility: visible;
         opacity: 1;
 
