@@ -144,7 +144,7 @@ export default class Instagram extends React.PureComponent {
     }
 
     fetchPhotos() {
-        fetch('https://api.instagram.com/v1/users/self/media/recent/?access_token=250227364.1e695f1.0ebe04392ebb4229ae692fa7cdfd5fe4')
+        fetch('https://api.instagram.com/v1/users/self/media/recent/?access_token=7294883355.f2b7c16.40594bd4835e445cbc5c9330cb3038c8')
             .then(response => {
                 return response.json()
             }).then(data => {
