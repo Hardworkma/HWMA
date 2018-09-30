@@ -107,7 +107,7 @@ export default class Menu extends React.PureComponent {
                                 </Col>
                                 <Col xs={'3'}>
                                     <div className={'sub-menu-container'}>
-                                        <img src={BeltIcon} alt={'Black Belt'} style={{paddingLeft:'45px', paddingBottom:'20px'}}/> <br/>
+                                        <img src={BeltIcon} alt={'Black Belt'} style={{paddingLeft:'45px', paddingBottom:'28px'}}/> <br/>
                                         <div className={'sub-menu-title'}><span style={{marginLeft:'62px'}}>Black Belts</span></div>
                                         <MenuItem path={'#'} title={'Curriculum'} />
                                         <MenuItem path={'#'} title={'Terminology'} />

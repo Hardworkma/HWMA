@@ -21,7 +21,7 @@ import CoreValuesPage from "./containers/CoreValuesPage";
 import ReviewsPage from "./containers/ReviewsPage";
 import PhilosophyPage from "./containers/PhilosophyPage";
 import SafeSportPage from "./containers/SafeSportPage";
-import HardWorkHerosPage from "./containers/HardWorkHerosPage";
+import HardWorkHeroesPage from "./containers/HardWorkHeroesPage";
 import FAQPage from "./containers/FAQPage";
 
 
@@ -41,7 +41,7 @@ class App extends Component {
                     <Route path="/afterschool" component={AfterschoolPage}/>
                     <Route path="/camp" component={CampPage}/>
                     <Route path="/faq" component={FAQPage}/>
-                    <Route path="/hardworkheros" component={HardWorkHerosPage}/>
+                    <Route path="/hardworkheroes" component={HardWorkHeroesPage}/>
                     <Route path="/philosophy" component={PhilosophyPage}/>
                     <Route path="/reviews" component={ReviewsPage}/>
                     <Route path="/safesport" component={SafeSportPage}/>

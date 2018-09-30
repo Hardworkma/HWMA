@@ -1,16 +1,16 @@
 import React from 'react'
 import {Row} from 'reactstrap'
 import Title from '../../components/Title/index';
-import HardWorkHeros from '../../components/HardWorkHeros/index';
+import HardWorkHeroes from '../../components/HardWorkHeroes/index';
 
-export default class HardWorkHerosPage extends React.PureComponent {
+export default class HardWorkHeroesPage extends React.PureComponent {
     render() {
         return (
             <div>
                 <Row className={'wrapper'}>
                     <div className={'card card-text'}>
-                        <Title title={'Hard Work Heros'}/>
-                        <HardWorkHeros/>
+                        <Title title={'Hard Work Heroes'}/>
+                        <HardWorkHeroes/>
                     </div>
                 </Row>
             </div>

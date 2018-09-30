@@ -172,8 +172,8 @@ export default class Instagram extends React.PureComponent {
 
         const settings = {
             infinite: true,
-            slidesToShow: 5,
-            slidesToScroll: 5
+            slidesToShow: 4,
+            slidesToScroll: 4
         };
 
         var images = photos.map((item, idx) => {
