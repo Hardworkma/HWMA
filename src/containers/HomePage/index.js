@@ -42,7 +42,7 @@ export default class HomePage extends React.PureComponent {
                     height='200px'
                     imagePath={PANO_1}
                     isDisplayCloseButton={false}
-                    showZoomCtrl={false}
+                    showZoomCtrl={true}
                     showFullscreenCtrl={false}
                     autoLoad />
             </div>
