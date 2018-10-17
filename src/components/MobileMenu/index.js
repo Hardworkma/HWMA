@@ -6,19 +6,26 @@ import InfoLinks from "../InfoLinks";
 import ProgramLinks from "../ProgramLinks";
 import Map from "../Map";
 import Address from "../Address";
+import Enroll from "../Enroll";
 
 export default class MobileMenu extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
             toggleMenu: false,
+            enroll: false,
         }
 
         this.toggleMenu = this.toggleMenu.bind(this);
+        this.enrollClick = this.enrollClick.bind(this);
     }
 
     toggleMenu() {
         this.setState({toggleMenu: !this.state.toggleMenu})
+    }
+
+    enrollClick() {
+        this.setState({enroll:true});
     }
 
     render() {
@@ -55,6 +62,10 @@ export default class MobileMenu extends React.PureComponent {
                     <CollapsingCard cardClass={'mobile-menu-card'} title={'Information'} titleClass={'mobile-menu-title'} body={<InfoLinks menuClick={this.toggleMenu}/>}/>
                     <CollapsingCard cardClass={'mobile-menu-card'} title={'Programs'} titleClass={'mobile-menu-title'} body={<ProgramLinks menuClick={this.toggleMenu}/>}/>
                     <CollapsingCard cardClass={'mobile-menu-card'} title={'Contact Us'} titleClass={'mobile-menu-title'} body={contact}/>
+                    <div className={'card mobile-menu-card'} onClick={this.enrollClick}>
+                        <h5 className="mobile-menu-title card-title">Enroll</h5>
+                        <Enroll showEnroll={this.state.enroll}/>
+                    </div>
                 </Row>
             </Container>
         )
