@@ -151,7 +151,7 @@
     padding: 5px 0;
 }
 
-.links>ul>li:hover>a::after {
+.links>ul>li.menu-link:hover>a::after {
     font-family: Font Awesome\ 5 Free;
     content:'\f0d8';
     position: absolute;
