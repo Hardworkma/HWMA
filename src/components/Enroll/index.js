@@ -1,7 +1,6 @@
 import React from 'react'
-import { AvForm, AvField } from 'availity-reactstrap-validation';
-import { Button, Col, Modal, FormGroup, Input, Label, ModalHeader, ModalBody, ModalFooter, Row } from 'reactstrap';
-
+import { Modal, ModalHeader, ModalBody, Row } from 'reactstrap';
+import Fist from '../../images/fist.gif'
 
 export default class Enroll extends React.PureComponent {
     constructor(props) {
@@ -12,7 +11,7 @@ export default class Enroll extends React.PureComponent {
     }
 
     redirect() {
-        setTimeout(function(){ window.location.replace("https://www.mystudio.academy/m/?=5714559071/1988") }, 3000);
+        setTimeout(function(){ window.location.replace("https://www.mystudio.academy/m/?=5714559071/1988") }, 4000);
     }
     render() {
         if(this.props.showEnroll) {
@@ -20,9 +19,11 @@ export default class Enroll extends React.PureComponent {
         }
         return(
             <Modal isOpen={this.props.showEnroll}  >
-                <ModalHeader >Please Wait</ModalHeader>
+                <ModalHeader >Redirecting...</ModalHeader>
                 <ModalBody>
-                    Please wait while you are redirected to our member portal.
+                    <Row className={'text-format'}>
+                        <img src={Fist} />
+                    </Row>
                 </ModalBody>
 
             </Modal>
