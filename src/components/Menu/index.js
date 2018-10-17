@@ -11,6 +11,7 @@ import MenuItem from "../MenuItem";
 import InfoLinks from "../InfoLinks";
 import ProgramLinks from "../ProgramLinks";
 import Address from "../Address";
+import Enroll from "../Enroll";
 
 
 export default class Menu extends React.PureComponent {
@@ -18,11 +19,13 @@ export default class Menu extends React.PureComponent {
         super(props);
         this.state = {
             showAbout: false,
+            enroll: false,
         }
 
         this.showAbout = this.showAbout.bind(this);
         this.hideAbout = this.hideAbout.bind(this);
         this.menuClick = this.menuClick.bind(this);
+        this.enrollClick = this.enrollClick.bind(this);
 
     }
 
@@ -37,17 +40,20 @@ export default class Menu extends React.PureComponent {
         this.hideAbout();
     }
 
+    enrollClick() {
+        this.setState({enroll:true});
+    }
+
     render() {
         let styleAbout = (this.state.showAbout)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
         return (
             <div className={'links text-right to-right'}>
                 <ul className={'links-menu horizontal list-inline'}>
-                    <li className={'header-link list-inline-item'}>
+                    <li className={'header-link list-inline-item menu-link'}>
                         <a href={'#'} onMouseEnter={this.showAbout} onMouseLeave={this.hideAbout} className={'no-underline'}>
                             Information <i className="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                         <div className={'sub-menu'} style={styleAbout} onMouseEnter={this.showAbout} onMouseLeave={this.hideAbout}>
-
                             <Row>
                                 <Col xs={'6'}>
                                     <Address addClass={'sub-menu-address'}
@@ -73,6 +79,12 @@ export default class Menu extends React.PureComponent {
                             </Row>
 
                         </div>
+                    </li>
+                    <li className={'header-link list-inline-item'}>
+                        <a href={'#'} onClick={this.enrollClick} className={'no-underline'}>
+                            Enroll
+                        </a>
+                        <Enroll showEnroll={this.state.enroll}/>
                     </li>
                 </ul>
             </div>
