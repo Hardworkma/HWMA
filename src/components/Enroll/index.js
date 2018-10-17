@@ -22,7 +22,7 @@ export default class Enroll extends React.PureComponent {
             <Modal isOpen={this.props.showEnroll}  >
                 <ModalHeader >Please Wait</ModalHeader>
                 <ModalBody>
-                    Please wait while you are redirected.
+                    Please wait while you are redirected to our member portal.
                 </ModalBody>
 
             </Modal>
