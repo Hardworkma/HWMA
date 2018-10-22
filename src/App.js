@@ -23,6 +23,7 @@ import PhilosophyPage from "./containers/PhilosophyPage";
 import SafeSportPage from "./containers/SafeSportPage";
 import HardWorkHeroesPage from "./containers/HardWorkHeroesPage";
 import FAQPage from "./containers/FAQPage";
+import TourPage from "./containers/TourPage"
 
 
 class App extends Component {
@@ -48,6 +49,7 @@ class App extends Component {
                     <Route path="/sidekicks" component={SideKicksPage}/>
                     <Route path="/schedule" component={SchedulePage}/>
                     <Route path="/taekwondo" component={TaekwondoPage}/>
+                    <Route path="/tour" component={TourPage}/>
                     <Route path="/welcome" component={WelcomePage}/>
                     <Footer/>
                 </Container>

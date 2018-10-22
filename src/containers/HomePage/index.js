@@ -5,10 +5,7 @@ import Home from '../../components/Home/index'
 import Twitter from "../../components/Twitter";
 import Instagram from "../../components/Instagram";
 import Title from '../../components/Title/index';
-
-import { Pannellum } from '360-react-pannellum'
-
-import PANO_1 from '../../images/PANO_1.jpg'
+import Tour from '../../components/Tour'
 
 export default class HomePage extends React.PureComponent {
     render() {
@@ -37,14 +34,6 @@ export default class HomePage extends React.PureComponent {
                 <div className={'ig-feed'}>
                     <Instagram />
                 </div>
-                <Pannellum
-                    width='100%'
-                    height='200px'
-                    imagePath={PANO_1}
-                    isDisplayCloseButton={false}
-                    showZoomCtrl={true}
-                    showFullscreenCtrl={false}
-                    autoLoad />
             </div>
         )
     }

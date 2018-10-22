@@ -10,6 +10,7 @@ export default class InfoLinks extends React.PureComponent {
                 <MenuItem path={'/faq'} title={'FAQ'} onClick={this.props.menuClick}/>
                 <MenuItem path={'/reviews'} title={'Reviews'} onClick={this.props.menuClick}/>
                 <MenuItem path={'#'} title={'Schedule'} />
+                <MenuItem path={'/tour'} title={'Tour'} onClick={this.props.menuClick}/>
             </div>
         )
     }
