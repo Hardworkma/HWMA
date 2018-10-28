@@ -12,6 +12,8 @@ import InfoLinks from "../InfoLinks";
 import ProgramLinks from "../ProgramLinks";
 import Address from "../Address";
 import Enroll from "../Enroll";
+import Tour from '../../components/Tour';
+import PANO_1 from "../../images/PANO_1.jpg";
 
 
 export default class Menu extends React.PureComponent {
@@ -19,11 +21,14 @@ export default class Menu extends React.PureComponent {
         super(props);
         this.state = {
             showAbout: false,
+            showTour: false,
             enroll: false,
         }
 
         this.showAbout = this.showAbout.bind(this);
         this.hideAbout = this.hideAbout.bind(this);
+        this.showTour = this.showTour.bind(this);
+        this.hideTour = this.hideTour.bind(this);
         this.menuClick = this.menuClick.bind(this);
         this.enrollClick = this.enrollClick.bind(this);
 
@@ -36,6 +41,14 @@ export default class Menu extends React.PureComponent {
     hideAbout() {
         this.setState({showAbout:false});
     }
+
+    showTour() {
+        this.setState({showTour:true});
+    }
+
+    hideTour() {
+        this.setState({showTour:false});
+    }
     menuClick() {
         this.hideAbout();
     }
@@ -46,6 +59,7 @@ export default class Menu extends React.PureComponent {
 
     render() {
         let styleAbout = (this.state.showAbout)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
+        let styleTour = (this.state.showTour)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
         return (
             <div className={'links text-right to-right'}>
                 <ul className={'links-menu horizontal list-inline'}>

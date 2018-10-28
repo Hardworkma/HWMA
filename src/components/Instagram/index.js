@@ -3,15 +3,8 @@ import ReactDOM from 'react-dom';
 import Slider from "react-slick";
 import Lightbox from 'react-images';
 import Image from './image'
-// import 'slick-carousel/slick/slick-theme.scss'
-// import slick from 'slick-carousel/slick/slick'
-// import "../../styles/_slick.css";
-// import "../../styles/_slick-theme.css";
-// import './slick-theme.min.css'
 import '../../styles/app.scss'
-import Carousel from 'react-image-carousel';
 
-import ThumbnailGallery from '../ThumbnailGallery/index'
 
 
 
@@ -36,16 +29,8 @@ export default class Instagram extends React.PureComponent {
         this.fetchPhotos();
     }
 
-    componentDidMount() {
-        // $('.slick-class').slick({
-        //     infinite: true,
-        //     slidesToShow: 3,
-        //     slidesToScroll: 3
-        // });
-    }
 
     openLightbox (index, event) {
-        console.log('open lightbox')
         if (event) {
             event.preventDefault();
         }
@@ -60,7 +45,6 @@ export default class Instagram extends React.PureComponent {
     }
 
     closeLightbox () {
-        console.log('close lightbox')
         if (this.props.lightboxWillClose) {
             this.props.lightboxWillClose.call(this);
         }
@@ -72,31 +56,21 @@ export default class Instagram extends React.PureComponent {
     }
 
     gotoPrevious () {
-        console.log('goto previous')
         this.setState({
             currentImage: this.state.currentImage - 1
         });
     }
 
     gotoNext () {
-        console.log('goto next')
         this.setState({
             currentImage: this.state.currentImage + 1
         });
     }
 
     onClickImage () {
-        console.log('on click image')
-        // if (this.state.currentImage === this.props.images.length - 1)
-        //     return;
         this.gotoNext();
     }
 
-    // onSelectImage (index, event) {
-    //     event.preventDefault();
-    //     if(this.props.onSelectImage)
-    //         this.props.onSelectImage.call(this, index, this.state.images[index]);
-    // }
 
     gotoImage (index) {
         this.setState({
@@ -105,7 +79,6 @@ export default class Instagram extends React.PureComponent {
     }
 
     getOnClickThumbnailFn () {
-        console.log('get on click thumbnail fn')
         if(!this.props.onClickThumbnail && this.props.enableLightbox)
             return this.openLightbox;
         if(this.props.onClickThumbnail)
@@ -114,7 +87,6 @@ export default class Instagram extends React.PureComponent {
     }
 
     getOnClickLightboxThumbnailFn () {
-        console.log('get on click lightbox thumbnail fn')
         if(!this.props.onClickLightboxThumbnail
             && this.props.showLightboxThumbnails)
             return this.gotoImage;
@@ -125,9 +97,6 @@ export default class Instagram extends React.PureComponent {
     }
 
     getOnClickImageFn () {
-        console.log('get on click imgage fn')
-        // if(this.props.onClickImage)
-        //     return this.props.onClickImage;
         return this.onClickImage;
     }
 
@@ -183,12 +152,7 @@ export default class Instagram extends React.PureComponent {
                 index={idx}
                 margin={item.margin}
                 height={item.thumbnailHeight}
-                // isSelectable={this.props.enableImageSelection}
                 onClickImage={() => this.setState({lightboxIsOpen: !this.state.lightboxIsOpen, currentImage:idx})}
-                // onSelectImage={this.onSelectImage}
-                // tagStyle={this.props.tagStyle}
-                // tileViewportStyle={this.props.tileViewportStyle}
-                // thumbnailStyle={this.props.thumbnailStyle}
             />;});
         var resizeIframeStyles = {
             height: 0,
@@ -210,28 +174,16 @@ export default class Instagram extends React.PureComponent {
 
                 <Lightbox
                     images={tmp}
-                    // backdropClosesModal={this.props.backdropClosesModal}
                     currentImage={this.state.currentImage}
-                    // preloadNextImage={this.props.preloadNextImage}
-                    // customControls={this.props.customControls}
-                    // enableKeyboardInput={this.props.enableKeyboardInput}
-                    // imageCountSeparator={this.props.imageCountSeparator}
                     isOpen={this.state.lightboxIsOpen}
                     onClickImage={this.getOnClickImageFn()}
                     onClickNext={this.getOnClickNextFn()}
                     onClickPrev={this.getOnClickPrevFn()}
-                    // showCloseButton={this.props.showCloseButton}
-                    // showImageCount={this.props.showImageCount}
                     onClose={this.closeLightbox}
-                    // width={this.props.lightboxWidth}
-                    // theme={this.props.theme}
                     onClickThumbnail={this.getOnClickLightboxThumbnailFn()}
-                    // showThumbnails={this.props.showLightboxThumbnails}
                 />
             </div>
 
         )
     }
 }
-
-//<ThumbnailGallery images={photos} maxRows={1} margin={10} enableThumbnailScroll={true} scrollWidth={30}/>{/*{/**/}*/}

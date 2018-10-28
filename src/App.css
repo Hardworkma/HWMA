@@ -575,6 +575,10 @@ and (max-device-width : 320px) {
         left: 60%;
     }
 
+    .tour_thumb {
+        width: 50%;
+    }
+
 }
 
 /*

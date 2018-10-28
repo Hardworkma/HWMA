@@ -5,6 +5,7 @@ import Home from '../../components/Home/index'
 import Twitter from "../../components/Twitter";
 import Instagram from "../../components/Instagram";
 import Title from '../../components/Title/index';
+import Tour from '../../components/Tour'
 
 export default class HomePage extends React.PureComponent {
     render() {
