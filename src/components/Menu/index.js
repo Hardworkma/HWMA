@@ -22,11 +22,14 @@ export default class Menu extends React.PureComponent {
         this.state = {
             showAbout: false,
             showTour: false,
+            showPrograms: false,
             enroll: false,
         }
 
         this.showAbout = this.showAbout.bind(this);
         this.hideAbout = this.hideAbout.bind(this);
+        this.showPrograms = this.showPrograms.bind(this);
+        this.hidePrograms = this.hidePrograms.bind(this);
         this.showTour = this.showTour.bind(this);
         this.hideTour = this.hideTour.bind(this);
         this.menuClick = this.menuClick.bind(this);
@@ -41,6 +44,13 @@ export default class Menu extends React.PureComponent {
     hideAbout() {
         this.setState({showAbout:false});
     }
+    showPrograms() {
+        this.setState({showPrograms:true});
+    }
+
+    hidePrograms() {
+        this.setState({showPrograms:false});
+    }
 
     showTour() {
         this.setState({showTour:true});
@@ -51,6 +61,7 @@ export default class Menu extends React.PureComponent {
     }
     menuClick() {
         this.hideAbout();
+        this.hidePrograms();
     }
 
     enrollClick() {
@@ -59,17 +70,24 @@ export default class Menu extends React.PureComponent {
 
     render() {
         let styleAbout = (this.state.showAbout)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
-        let styleTour = (this.state.showTour)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
+        let stylePrograms = (this.state.showPrograms)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
+        // let styleTour = (this.state.showTour)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
         return (
             <div className={'links text-right to-right'}>
                 <ul className={'links-menu horizontal list-inline'}>
+                    <li className={'header-link list-inline-item'}>
+                        <a href={'#'} onClick={this.enrollClick} className={'no-underline'}>
+                            Enroll
+                        </a>
+                        <Enroll showEnroll={this.state.enroll}/>
+                    </li>
                     <li className={'header-link list-inline-item menu-link'}>
                         <a href={'#'} onMouseEnter={this.showAbout} onMouseLeave={this.hideAbout} className={'no-underline'}>
                             Information <i className="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                         <div className={'sub-menu'} style={styleAbout} onMouseEnter={this.showAbout} onMouseLeave={this.hideAbout}>
                             <Row>
-                                <Col xs={'6'}>
+                                <Col xs={'9'}>
                                     <Address addClass={'sub-menu-address'}
                                              add1Class={'sub-menu-address1'}
                                              phoneClass={'sub-menu-phone'}
@@ -83,22 +101,28 @@ export default class Menu extends React.PureComponent {
                                         <InfoLinks menuClick={this.menuClick}/>
                                     </div>
                                 </Col>
+                            </Row>
+
+                        </div>
+                    </li>
+                    <li className={'header-link list-inline-item menu-link'}>
+                        <a href={'#'} onMouseEnter={this.showPrograms} onMouseLeave={this.hidePrograms} className={'no-underline'}>
+                            Programs <i className="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <div className={'sub-menu'} style={stylePrograms} onMouseEnter={this.showPrograms} onMouseLeave={this.hidePrograms}>
+                            <Row>
+                                <Col xs={'9'}>
+                                    <img src={KidKick} style={{marginLeft:'30%', marginTop:'10%'}}/>
+                                </Col>
                                 <Col xs={'3'}>
                                     <div className={'sub-menu-container'}>
-                                        <img src={Kick} alt={'HWMA logo'} style={{paddingLeft:'90px', paddingBottom:'20px'}}/> <br/>
+                                        <img src={BeltIcon} alt={'HWMA logo'} style={{paddingLeft:'45px', paddingBottom:'20px'}}/> <br/>
                                         <div className={'sub-menu-title'}><span style={{marginLeft:'62px'}}>Programs</span></div>
                                         <ProgramLinks menuClick={this.menuClick}/>
                                     </div>
                                 </Col>
                             </Row>
-
                         </div>
-                    </li>
-                    <li className={'header-link list-inline-item'}>
-                        <a href={'#'} onClick={this.enrollClick} className={'no-underline'}>
-                            Enroll
-                        </a>
-                        <Enroll showEnroll={this.state.enroll}/>
                     </li>
                 </ul>
             </div>
