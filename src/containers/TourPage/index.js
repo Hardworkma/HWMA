@@ -9,20 +9,17 @@ export default class TourPage extends React.PureComponent {
     render() {
         return (
             <div>
+                <br/>
+                <br/>
                 <Row className={'wrapper'}>
                     <div className={'card faq-card'}>
                         <Title title={'Tour the School'}/>
                         <Tour />
+                        <br/>
+                        <br/>
                     </div>
                 </Row>
-                <Row>
-                    <Col>
-                        <img src={pano_1_thumb} />
-                    </Col>
-                    <Col>
-                        <img src={pano_2_thumb} />
-                    </Col>
-                </Row>
+
             </div>
         );
     }

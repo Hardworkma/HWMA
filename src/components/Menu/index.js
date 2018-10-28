@@ -14,7 +14,6 @@ import Address from "../Address";
 import Enroll from "../Enroll";
 import Tour from '../../components/Tour';
 import PANO_1 from "../../images/PANO_1.jpg";
-import {Pannellum} from "360-react-pannellum";
 
 
 export default class Menu extends React.PureComponent {
