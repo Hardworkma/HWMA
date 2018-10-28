@@ -10,6 +10,7 @@
     "react": "^16.4.2",
     "react-bootstrap": "^0.32.3",
     "react-dom": "^16.4.2",
+    "react-facebook-pixel": "^0.1.1",
     "react-google-maps": "^9.4.5",
     "react-image-carousel": "^2.0.18",
     "react-images": "^0.5.19",
