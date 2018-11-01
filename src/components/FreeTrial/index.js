@@ -7,7 +7,7 @@ export default class FreeTrial extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            modal: true,
+            modal: false,
             name: "",
             email:"",
             phone:"",
