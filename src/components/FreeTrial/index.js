@@ -7,7 +7,6 @@ export default class FreeTrial extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            modal: false,
             name: "",
             email:"",
             phone:"",
@@ -15,17 +14,13 @@ export default class FreeTrial extends React.PureComponent {
             program:"Hard Work Heroes"
         };
 
-        this.toggle = this.toggle.bind(this);
+
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInvalidSubmit = this.handleInvalidSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
 
-    toggle() {
-        this.setState({
-            modal: !this.state.modal
-        });
-    }
+
 
     handleChange(e) {
         this.setState({[e.target.name]: e.target.value})
@@ -40,8 +35,6 @@ export default class FreeTrial extends React.PureComponent {
             "questions": this.state.questions,
             "program": this.state.program}
 
-            console.log(JSON.stringify(data))
-
         fetch('http://ec2-54-175-190-191.compute-1.amazonaws.com:3000/email', {
             method: 'post',
             headers: {
@@ -50,7 +43,6 @@ export default class FreeTrial extends React.PureComponent {
             },
             body: JSON.stringify(data)
         });
-        this.toggle();
     }
 
     handleInvalidSubmit(event, errors, values) {
@@ -58,33 +50,40 @@ export default class FreeTrial extends React.PureComponent {
     }
 
     render() {
+        let formStyle = {paddingLeft:'8%'}
         return(
-            <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                <ModalHeader toggle={this.toggle}>FREE 2 Week Trial!</ModalHeader>
-                <ModalBody>
-                    <AvForm onValidSubmit={this.handleSubmit} onInvalidSubmit={this.handleInvalidSubmit}>
+            <Row >
+                    <AvForm style={formStyle} onValidSubmit={this.handleSubmit} onInvalidSubmit={this.handleInvalidSubmit}>
                     <FormGroup>
-                        <Row>
+                        <Row >
                             <Col xs={2}><Label for="name">Name: </Label></Col>
-                            <Col xs={10}><AvField name="name" placeholder={"* Full Name"} required onChange={this.handleChange} errorMessage="Please enter your full name!"/></Col>
+                        </Row>
+                        <Row >
+                            <Col><AvField className={'free-trial-input'} name="name" placeholder={"* Full Name"} required onChange={this.handleChange} errorMessage="Please enter your full name!"/></Col>
                         </Row>
                     </FormGroup>
                     <FormGroup>
-                        <Row>
+                        <Row >
                             <Col xs={2}><Label for="email">Email: </Label></Col>
-                            <Col xs={10}><AvField name="email" placeholder={"* Email"} type="email" required onChange={this.handleChange} errorMessage="Please enter a valid email!"/></Col>
+                        </Row>
+                        <Row>
+                            <Col><AvField className={'free-trial-input'} name="email" placeholder={"* Email"} type="email" required onChange={this.handleChange} errorMessage="Please enter a valid email!"/></Col>
                         </Row>
                     </FormGroup>
-                    <FormGroup>
+                    <FormGroup >
                         <Row>
                             <Col xs={2}><Label for="phone">Phone: </Label></Col>
-                            <Col xs={10}><AvField name="phone" placeholder={"* Phone xxx-xxx-xxxx"} type="phone" required onChange={this.handleChange} errorMessage="Please enter a valid phone number!"/></Col>
+                        </Row>
+                        <Row>
+                            <Col ><AvField className={'free-trial-input'} name="phone" placeholder={"* Phone xxx-xxx-xxxx"} type="phone" required onChange={this.handleChange} errorMessage="Please enter a valid phone number!"/></Col>
                         </Row>
                     </FormGroup>
                     <FormGroup>
                         <Row>
                             <Col xs={2}><Label for="phone">Program: </Label></Col>
-                            <Col xs={10}><Input type="select" name="program" onChange={this.handleChange} id="program" >
+                        </Row>
+                        <Row>
+                            <Col><Input className={'free-trial-input'} type="select" name="program" onChange={this.handleChange} id="program" >
                                 <option>Hard Work Heroes</option>
                                 <option>Sidekicks</option>
                                 <option>Taekwondo</option>
@@ -92,17 +91,15 @@ export default class FreeTrial extends React.PureComponent {
                         </Row>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="questions">Questions/Comments</Label>
-                        <Input type="textarea" name="questions" id="questions" onChange={this.handleChange} />
+                            <Label for="questions">Questions/Comments:</Label>
+                            <Input className={'free-trial-input'} type="textarea" name="questions" id="questions" onChange={this.handleChange} />
                     </FormGroup>
+                        <Row>
+                            <Button className={'register-button'} onClick={this.handleSubmit}>Register</Button>
+                            <br/>
+                        </Row>
                     </AvForm>
-                </ModalBody>
-                <ModalFooter>
-                    <Button className={'register-button'} onClick={this.handleSubmit}>Register</Button>{' '}
-                    <br/>
-
-                </ModalFooter>
-            </Modal>
+            </Row>
         );
     }
 }
