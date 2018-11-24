@@ -315,6 +315,11 @@ li.menu-item {
     height:300px;
 }
 
+.register-message {
+    color: green;
+    margin-left: 3%;
+}
+
 .register-button {
     margin-left: 42%;
     background-color: #E75924;
