@@ -73,7 +73,6 @@ export default class FreeTrial extends React.PureComponent {
     }
 
     render() {
-        console.log(JSON.stringify(this.state))
         let formStyle = {paddingLeft:'8%'}
         let messageDisplay = (this.state.showRegisterMessage) ? {} : {'display':'none'}
         return(
