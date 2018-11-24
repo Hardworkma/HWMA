@@ -82,13 +82,18 @@
 }
 
 .card-left {
-    width: 65%;
-    margin-right: 2.5%;
+    width: 25%;
+    margin-right: 1%;
+}
+
+.card-middle {
+    width: 49%;
+    margin-right: 1%;
 }
 
 .card-right {
-    width: 32%;
-    margin-right: .5%;
+    width: 23%;
+    margin-right: .3%;
 }
 
 .card-double {
@@ -99,6 +104,10 @@
 
 .card-text {
     padding: 10px;
+}
+
+.free-trial-input {
+    width: 128%;
 }
 
 .ig-feed {
@@ -307,6 +316,7 @@ li.menu-item {
 }
 
 .register-button {
+    margin-left: 42%;
     background-color: #E75924;
     color: white;
 }
@@ -509,7 +519,7 @@ and (max-device-width : 320px) {
     .card {
         margin-bottom: 5px;
         margin-top: 5px;
-        width: 320px;
+        width: 100%;
     }
 
     .card-title {
@@ -654,7 +664,7 @@ and (device-width : 360px) {
     .card {
         margin-bottom: 5px;
         margin-top: 5px;
-        width: 360px;
+        width: 100%;
     }
 
     .card-title {
@@ -786,7 +796,7 @@ and (device-width : 411px) {
     .card {
         margin-bottom: 5px;
         margin-top: 5px;
-        width: 411px;
+        width: 100%;
     }
 
     .card-title {
@@ -928,6 +938,7 @@ and (device-height : 667px) {
     .card {
         margin-top: 5px;
         margin-bottom: 5px;
+        width: 100%;
     }
 
     .faq-card {

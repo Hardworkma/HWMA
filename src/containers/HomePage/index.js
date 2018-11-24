@@ -10,19 +10,24 @@ import Tour from '../../components/Tour'
 export default class HomePage extends React.PureComponent {
     render() {
         let cardLeft = (window.innerWidth < 400) ? 'card' : 'card card-left'
+        let cardMiddle = (window.innerWidth < 400) ? 'card' : 'card card-middle'
         let cardRight = (window.innerWidth < 400) ? 'card' : 'card card-right'
 
         return (
             <div>
-                <FreeTrial className={'free-trial-modal'}/>
                 <Row className={'home'}>
                     <Home/>
                 </Row>
                 <Row className={'wrapper'}>
                     <div className={cardLeft}>
+                        <Title title={'Free Trial'}/>
+                        <br/>
+                        <FreeTrial/>
+                    </div>
+                    <div className={cardMiddle}>
                         <Title title={'Welcome'}/>
                         <br/>
-                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/10D45JTg2W8"
+                        <iframe width="100%" height="550" src="https://www.youtube.com/embed/10D45JTg2W8"
                                 frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                     </div>
                     <div className={cardRight}>
