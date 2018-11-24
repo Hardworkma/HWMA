@@ -46,15 +46,14 @@ export default class FreeTrial extends React.PureComponent {
             "questions": this.state.questions,
             "program": this.state.program}
 
-        // fetch('http://ec2-54-175-190-191.compute-1.amazonaws.com:3000/email', {
-        //     method: 'post',
-        //     headers: {
-        //         'Accept': 'application/json; charset=utf-8',
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(data)
-        // }, this.initForm());
-        this.initForm();
+        fetch('http://ec2-54-175-190-191.compute-1.amazonaws.com:3000/email', {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json; charset=utf-8',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        }, this.initForm());
     }
 
     initForm() {
