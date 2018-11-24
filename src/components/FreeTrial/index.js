@@ -11,18 +11,29 @@ export default class FreeTrial extends React.PureComponent {
             email:"",
             phone:"",
             questions:"",
-            program:"Hard Work Heroes"
+            program:"Hard Work Heroes",
+            showRegisterMessage: false,
         };
 
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInvalidSubmit = this.handleInvalidSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.initForm = this.initForm.bind(this);
+    }
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.showRegisterMessage) {
+            // when the state is updated (turned red),
+            // a timeout is triggered to switch it back off
+            this.handleChange = setTimeout(() => {
+                this.setState(() => ({showRegisterMessage: false}))
+            }, 5000);
+        }
     }
 
 
-
     handleChange(e) {
+        debugger
         this.setState({[e.target.name]: e.target.value})
     }
 
@@ -35,14 +46,26 @@ export default class FreeTrial extends React.PureComponent {
             "questions": this.state.questions,
             "program": this.state.program}
 
-        fetch('http://ec2-54-175-190-191.compute-1.amazonaws.com:3000/email', {
-            method: 'post',
-            headers: {
-                'Accept': 'application/json; charset=utf-8',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        });
+        // fetch('http://ec2-54-175-190-191.compute-1.amazonaws.com:3000/email', {
+        //     method: 'post',
+        //     headers: {
+        //         'Accept': 'application/json; charset=utf-8',
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(data)
+        // }, this.initForm());
+        this.initForm();
+    }
+
+    initForm() {
+        this.setState({
+            name: "",
+            email:"",
+            phone:"",
+            questions:"",
+            program:"Hard Work Heroes",
+            showRegisterMessage: true,
+        }, this.form && this.form.reset());
     }
 
     handleInvalidSubmit(event, errors, values) {
@@ -50,16 +73,19 @@ export default class FreeTrial extends React.PureComponent {
     }
 
     render() {
+        console.log(JSON.stringify(this.state))
         let formStyle = {paddingLeft:'8%'}
+        let messageDisplay = (this.state.showRegisterMessage) ? {} : {'display':'none'}
         return(
             <Row >
-                    <AvForm style={formStyle} onValidSubmit={this.handleSubmit} onInvalidSubmit={this.handleInvalidSubmit}>
+                <Col xs={12} className={'register-message'} style={messageDisplay}>Registration complete!<br/>  HWMA will contact you shortly.</Col>
+                <AvForm style={formStyle} onValidSubmit={this.handleSubmit} onInvalidSubmit={this.handleInvalidSubmit} ref={c => (this.form = c)}>
                     <FormGroup>
                         <Row >
                             <Col xs={2}><Label for="name">Name: </Label></Col>
                         </Row>
                         <Row >
-                            <Col><AvField className={'free-trial-input'} name="name" placeholder={"* Full Name"} required onChange={this.handleChange} errorMessage="Please enter your full name!"/></Col>
+                            <Col><AvField className={'free-trial-input'} name="name" state={this.state.name} placeholder={"* Full Name"} required onChange={this.handleChange} errorMessage="Please enter your full name!"/></Col>
                         </Row>
                     </FormGroup>
                     <FormGroup>
@@ -95,7 +121,7 @@ export default class FreeTrial extends React.PureComponent {
                             <Input className={'free-trial-input'} type="textarea" name="questions" id="questions" onChange={this.handleChange} />
                     </FormGroup>
                         <Row>
-                            <Button className={'register-button'} onClick={this.handleSubmit}>Register</Button>
+                            <Button className={'register-button'} >Register</Button>
                             <br/>
                         </Row>
                     </AvForm>
