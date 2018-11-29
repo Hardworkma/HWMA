@@ -113,9 +113,11 @@ export default class Instagram extends React.PureComponent {
     }
 
     fetchPhotos() {
-        fetch('https://api.instagram.com/v1/users/self/media/recent/?access_token=7294883355.f2b7c16.40594bd4835e445cbc5c9330cb3038c8')
+        fetch('https://api.instagram.com/v1/users/self/media/recent/?access_token=7294883355.f2b7c16.7853b9f73fa041e3a4bb16dcaefd2df5')
             .then(response => {
-                return response.json()
+                if(response.ok) {
+                    return response.json()
+                }
             }).then(data => {
                 this.setState({
                     photos: data.data
@@ -164,26 +166,25 @@ export default class Instagram extends React.PureComponent {
             backgroundColor: "transparent",
             width: "100%"
         };
+        if(photos.map.length > 0 ) {
+            return (
+                <div>
+                    <Slider {...settings}>
+                        {images}
+                    </Slider>
 
-        return (
-
-            <div>
-                <Slider {...settings}>
-                    {images}
-                </Slider>
-
-                <Lightbox
-                    images={tmp}
-                    currentImage={this.state.currentImage}
-                    isOpen={this.state.lightboxIsOpen}
-                    onClickImage={this.getOnClickImageFn()}
-                    onClickNext={this.getOnClickNextFn()}
-                    onClickPrev={this.getOnClickPrevFn()}
-                    onClose={this.closeLightbox}
-                    onClickThumbnail={this.getOnClickLightboxThumbnailFn()}
-                />
-            </div>
-
-        )
+                    <Lightbox
+                        images={tmp}
+                        currentImage={this.state.currentImage}
+                        isOpen={this.state.lightboxIsOpen}
+                        onClickImage={this.getOnClickImageFn()}
+                        onClickNext={this.getOnClickNextFn()}
+                        onClickPrev={this.getOnClickPrevFn()}
+                        onClose={this.closeLightbox}
+                        onClickThumbnail={this.getOnClickLightboxThumbnailFn()}
+                    />
+                </div>
+            )
+        }
     }
 }

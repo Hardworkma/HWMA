@@ -106,6 +106,14 @@
     padding: 10px;
 }
 
+.contact-us-card {
+    width: 100%;
+}
+
+.announcement-card {
+    margin-top: 0px !important;
+}
+
 .free-trial-input {
     width: 128%;
 }
@@ -527,6 +535,10 @@ and (max-device-width : 320px) {
         width: 100%;
     }
 
+    .card-right {
+        width: 100%;
+    }
+
     .card-title {
         margin-left: 5px;
     }
@@ -672,6 +684,10 @@ and (device-width : 360px) {
         width: 100%;
     }
 
+    .card-right {
+        width: 100%;
+    }
+
     .card-title {
         margin-left: 5px;
     }
@@ -801,6 +817,10 @@ and (device-width : 411px) {
     .card {
         margin-bottom: 5px;
         margin-top: 5px;
+        width: 100%;
+    }
+
+    .card-right {
         width: 100%;
     }
 
@@ -946,6 +966,10 @@ and (device-height : 667px) {
         width: 100%;
     }
 
+    .card-right {
+        width: 100%;
+    }
+
     .faq-card {
         margin-right: 2%;
         margin-left: 2%;
@@ -1026,6 +1050,10 @@ and (max-device-width : 1024px)  {
     }
 
     .card {
+        width: 100%;
+    }
+
+    .card-right {
         width: 100%;
     }
 }
