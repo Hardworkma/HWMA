@@ -15,7 +15,7 @@ export default class Twitter extends React.PureComponent {
                 }}
                 options={{
                     username: 'HardWorkMarArts',
-                    height: '550',
+                    height: '330',
                     width: {width},
                     'chrome': 'noheader nofooter'
                 }}
