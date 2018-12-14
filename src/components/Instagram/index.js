@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Slider from "react-slick";
 import Lightbox from 'react-images';
 import Image from './image'
-import '../../styles/app.scss'
+import '../../styles/app.css'
 
 
 

@@ -11,7 +11,7 @@ export default class Enroll extends React.PureComponent {
     }
 
     redirect() {
-        setTimeout(function(){ window.location.replace("https://www.mystudio.academy/m/?=5714559071/1988") }, 4000);
+        setTimeout(function(){ window.location.replace("https://www.mystudio.academy/m/?=hwma/1988") }, 4000);
     }
     render() {
         if(this.props.showEnroll) {
