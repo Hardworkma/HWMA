@@ -15,4 +15,4 @@ ReactPixel.pageView(); 					// For tracking page view
 // ReactPixel.track( event, data ) 		// For tracking default events, more info about events and data https://developers.facebook.com/docs/ads-for-websites/pixel-events/v2.9
 // ReactPixel.trackCustom( event, data ) 	// For tracking custom events
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.hydrate(<App />, document.getElementById('root'));
