@@ -3,6 +3,9 @@ import chalk from 'chalk';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { matchRoutes } from 'react-router-config';
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
+
 import routes from '../src/routes';
 import HTML from '../src/containers/HTML/index';
 import App from '../src/App';
@@ -12,7 +15,9 @@ export default function renderRoute(req, res) {
     const promises = [];
 
     branch.forEach(({ route, match }) => {
+        console.log(`renderRoute : ${JSON.stringify(route)} - ${JSON.stringify(match)}`);
         if (route.loadData) {
+            // console.log(chalk.green('loadData: ${route.loadData}'));
             promises.push(route.loadData(match));
         }
     });
@@ -20,7 +25,6 @@ export default function renderRoute(req, res) {
     Promise.all(promises).then(data => {
         // data will be an array[] of datas returned by each promises.
         // // console.log(data)
-
         const context = data.reduce((context, data) => Object.assign(context, data), {});
 
         const router = <StaticRouter location={req.url} context={context}><App /></StaticRouter>;
@@ -29,7 +33,7 @@ export default function renderRoute(req, res) {
 
         const html = renderToString(<HTML html={app} />);
 
-        console.log(chalk.green(`<!DOCTYPE html>${html}`));
+        // console.log(chalk.green(`<!DOCTYPE html>${html}`));
 
         return res.send(`<!DOCTYPE html>${html}`);
     });

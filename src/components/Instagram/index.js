@@ -28,9 +28,18 @@ export default class Instagram extends React.PureComponent {
     }
 
     componentWillMount() {
-        this.fetchPhotos();
+        this.fetchPhotos('https://api.instagram.com/v1/users/self/media/recent/?access_token=7294883355.f2b7c16.7853b9f73fa041e3a4bb16dcaefd2df5')
+            .then(res => this.setState({ photos: res.data }))
+            .catch(err => console.log(err));
     }
+    fetchPhotos = async function (endpoint) {
+        const response = await fetch(endpoint);
+        const body = await response.json();
 
+        if (response.status !== 200) throw Error(body.message);
+
+        return body;
+    }
 
     openLightbox (index, event) {
         if (event) {
@@ -112,19 +121,6 @@ export default class Instagram extends React.PureComponent {
         if(this.props.onClickNext)
             return this.props.onClickNext;
         return this.gotoNext;
-    }
-
-    fetchPhotos() {
-        // fetch('https://api.instagram.com/v1/users/self/media/recent/?access_token=7294883355.f2b7c16.7853b9f73fa041e3a4bb16dcaefd2df5')
-        //     .then(response => {
-        //         if(response.ok) {
-        //             return response.json()
-        //         }
-        //     }).then(data => {
-        //         this.setState({
-        //             photos: data.data
-        //         })
-        // })
     }
 
     render() {

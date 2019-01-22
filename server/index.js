@@ -33,37 +33,3 @@ http.createServer(app).listen(app.get('port'), () => {
 module.exports = app;
 
 
-
-// const PORT = process.env.PORT || 80;
-// const app = express();
-//
-// app.use(express.static('./build'));
-//
-// app.get('/*', (req, res) => {
-//     const context = {};
-//
-//     const html = ReactDOMServer.renderToString(
-//         <StaticRouter location={req.url} context={context}>
-//             <App />
-//         </StaticRouter>
-//     );
-//
-//     if (context.url) {
-//         res.writeHead(301, {
-//             Location: context.url
-//         });
-//         res.end();
-//     } else {
-//         console.log(html)
-//         res.write(`
-//       <!doctype html>
-//       <div id="app">${html}</div>
-//     `);
-//         res.end();
-//     }
-// });
-//
-// app.listen(PORT, () => {
-//     console.log(`Server is listening on port ${PORT}`);
-// });
-

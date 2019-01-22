@@ -1,6 +1,3 @@
-import Header from "./components/Header/index";
-import Footer from './components/Footer/index';
-
 import Root from './Root'
 import About from "./components/About/index"
 import AfterschoolPage from './containers/AfterschoolPage/index';
@@ -23,7 +20,7 @@ const routes = [
             {
                 path: '/',
                 exact: true,
-                component: HomePage
+                component: HomePage,
             },
             {
                 path: '/about',
