@@ -87,7 +87,7 @@ export default class Menu extends React.PureComponent {
                                 </Col>
                                 <Col xs={'3'} >
                                     <div className={'sub-menu-container'}>
-                                        <img src='https://s3.amazonaws.com/hwma-images/kick.png' alt={'HWMA logo'} style={{paddingLeft:'90px', paddingBottom:'20px'}}/> <br/>
+                                        <img src='https://s3.amazonaws.com/hwma-images/icon-orange.png' alt={'HWMA logo'} style={{paddingLeft:'90px', paddingBottom:'20px'}}/> <br/>
                                         <div className={'sub-menu-title'}><span style={{marginLeft:'62px'}}>Information</span></div>
                                         <InfoLinks menuClick={this.menuClick}/>
                                     </div>
@@ -103,7 +103,7 @@ export default class Menu extends React.PureComponent {
                         <div className={'sub-menu'} style={stylePrograms} onMouseEnter={this.showPrograms} onMouseLeave={this.hidePrograms}>
                             <Row>
                                 <Col xs={'9'}>
-                                    <img src='https://s3.amazonaws.com/hwma-images/icon-orange.png' style={{marginLeft:'30%', marginTop:'10%'}}/>
+                                    <img src='https://s3.amazonaws.com/hwma-images/kick.png' style={{marginLeft:'30%', marginTop:'10%'}}/>
                                 </Col>
                                 <Col xs={'3'}>
                                     <div className={'sub-menu-container'}>

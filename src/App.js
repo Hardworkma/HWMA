@@ -5,7 +5,7 @@ import Footer from './components/Footer/index'
 import Header from './components/Header/index'
 
 const App = () => (
-    <div>
+    <div className="container-fluid container">
         <Header />
         {renderRoutes(routes)}
         <Footer/>

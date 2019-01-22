@@ -22,5 +22,13 @@ const renderRouter = Component => {
         </BrowserRouter>, document.getElementById('root')
     );
 };
+// const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
+// renderMethod(
+//     <BrowserRouter>
+//         <Component />
+//     </BrowserRouter>,
+//     document.getElementById('root')
+// );
+
 
 renderRouter(App);
