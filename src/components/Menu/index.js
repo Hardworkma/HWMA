@@ -1,19 +1,11 @@
 import React from 'react';
 import {Col, Row} from 'reactstrap'
 
-import Icon from '../../images/icon-orange.png'
-import Kick from '../../images/kick-orange.png'
-import KidKick from '../../images/kick.png';
-import BeltIcon from '../../images/belt-icon.png'
-import GreenIcon from '../../images/green-icon.png'
 import Map from '../../components/Map/index'
-import MenuItem from "../MenuItem";
 import InfoLinks from "../InfoLinks";
 import ProgramLinks from "../ProgramLinks";
 import Address from "../Address";
 import Enroll from "../Enroll";
-import Tour from '../../components/Tour';
-import PANO_1 from "../../images/PANO_1.jpg";
 
 
 export default class Menu extends React.PureComponent {
@@ -71,7 +63,6 @@ export default class Menu extends React.PureComponent {
     render() {
         let styleAbout = (this.state.showAbout)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
         let stylePrograms = (this.state.showPrograms)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
-        // let styleTour = (this.state.showTour)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
         return (
             <div className={'links text-right to-right'}>
                 <ul className={'links-menu horizontal list-inline'}>
@@ -96,7 +87,7 @@ export default class Menu extends React.PureComponent {
                                 </Col>
                                 <Col xs={'3'} >
                                     <div className={'sub-menu-container'}>
-                                        <img src={Icon} alt={'HWMA logo'} style={{paddingLeft:'90px', paddingBottom:'20px'}}/> <br/>
+                                        <img src='https://s3.amazonaws.com/hwma-images/icon-orange.png' alt={'HWMA logo'} style={{paddingLeft:'90px', paddingBottom:'20px'}}/> <br/>
                                         <div className={'sub-menu-title'}><span style={{marginLeft:'62px'}}>Information</span></div>
                                         <InfoLinks menuClick={this.menuClick}/>
                                     </div>
@@ -112,11 +103,11 @@ export default class Menu extends React.PureComponent {
                         <div className={'sub-menu'} style={stylePrograms} onMouseEnter={this.showPrograms} onMouseLeave={this.hidePrograms}>
                             <Row>
                                 <Col xs={'9'}>
-                                    <img src={KidKick} style={{marginLeft:'30%', marginTop:'10%'}}/>
+                                    <img src='https://s3.amazonaws.com/hwma-images/kick.png' style={{marginLeft:'30%', marginTop:'10%'}}/>
                                 </Col>
                                 <Col xs={'3'}>
                                     <div className={'sub-menu-container'}>
-                                        <img src={BeltIcon} alt={'HWMA logo'} style={{paddingLeft:'45px', paddingBottom:'20px'}}/> <br/>
+                                        <img src='https://s3.amazonaws.com/hwma-images/belt-icon.png' alt={'HWMA logo'} style={{paddingLeft:'45px', paddingBottom:'20px'}}/> <br/>
                                         <div className={'sub-menu-title'}><span style={{marginLeft:'62px'}}>Programs</span></div>
                                         <ProgramLinks menuClick={this.menuClick}/>
                                     </div>

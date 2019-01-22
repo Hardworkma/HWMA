@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
 import App from './App';
 import ReactPixel from 'react-facebook-pixel';
 
@@ -11,8 +12,23 @@ const options = {
 };
 ReactPixel.init('256646485044778', advancedMatching, options);
 
-ReactPixel.pageView(); 					// For tracking page view
-// ReactPixel.track( event, data ) 		// For tracking default events, more info about events and data https://developers.facebook.com/docs/ads-for-websites/pixel-events/v2.9
-// ReactPixel.trackCustom( event, data ) 	// For tracking custom events
+ReactPixel.pageView();
 
-ReactDOM.hydrate(<App />, document.getElementById('root'));
+// ReactDOM.hydrate(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
+const renderRouter = Component => {
+    ReactDOM.hydrate(
+        <BrowserRouter>
+            <Component />
+        </BrowserRouter>, document.getElementById('root')
+    );
+};
+// const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
+// renderMethod(
+//     <BrowserRouter>
+//         <Component />
+//     </BrowserRouter>,
+//     document.getElementById('root')
+// );
+
+
+renderRouter(App);

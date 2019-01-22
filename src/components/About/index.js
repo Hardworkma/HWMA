@@ -6,7 +6,7 @@ import Philosophy from "../Philosophy";
 
 export default class About extends React.PureComponent {
     render() {
-        let classes = (window.innerWidth < 400) ? 'card card-text' :  'card card-double card-text'
+        let classes = (typeof(window) !== "undefined" && window.innerWidth < 400) ? 'card card-text' :  'card card-double card-text'
         return(
             <div>
                 <Row className={'wrapper'}>

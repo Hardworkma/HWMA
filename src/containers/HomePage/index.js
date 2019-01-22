@@ -8,9 +8,10 @@ import Title from '../../components/Title/index';
 
 export default class HomePage extends React.PureComponent {
     render() {
-        let cardLeft = (window.innerWidth < 400) ? 'card' : 'card card-left'
-        let cardMiddle = (window.innerWidth < 400) ? 'card' : 'card card-middle'
-        let cardRight = (window.innerWidth < 400) ? 'card' : 'card card-right'
+        let cardLeft = (typeof(window) !== "undefined" && window.innerWidth < 400) ? 'card' : 'card card-left'
+        let cardMiddle = (typeof(window) !== "undefined" && window.innerWidth < 400) ? 'card' : 'card card-middle'
+        let cardRight = (typeof(window) !== "undefined" && window.innerWidth < 400) ? 'card' : 'card card-right'
+
 
         return (
             <div>

@@ -2,7 +2,6 @@ import React from 'react';
 import MenuItem from "../MenuItem";
 
 export default class InfoLinks extends React.PureComponent {
-    //<MenuItem path={'/tour'} title={'Tour'} onClick={this.props.menuClick}/>
     render() {
         return (
             <div>

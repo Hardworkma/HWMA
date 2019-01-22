@@ -4,7 +4,7 @@ import { Timeline } from 'react-twitter-widgets'
 export default class Twitter extends React.PureComponent {
     render() {
         let width = '500';
-        if(window.innerWidth > 375 && window.innerWidth < 667 ) {
+        if(typeof(window) !== "undefined" && window.innerWidth > 375 && window.innerWidth < 667 ) {
             width = '850'
         }
         return(
