@@ -22,7 +22,7 @@
 
 
 .header:before {
-    background: url('./images/hwma_background.png');
+    background: url('https://s3.amazonaws.com/hwma-images/hwma_background.png');
     background-repeat: repeat-x;
     content: "";
     position: absolute;
@@ -393,7 +393,7 @@ li.menu-item {
 }
 
 .footer:before {
-    background: url('./images/hwma_background.png');
+    background: url('https://s3.amazonaws.com/hwma-images/hwma_background.png');
     background-repeat: repeat-x;
     content: "";
     position: absolute;

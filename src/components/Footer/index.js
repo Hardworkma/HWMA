@@ -1,6 +1,5 @@
 import React from 'react';
 import {Col, Row} from 'reactstrap'
-import Logo from '../../images/icon-orange.png'
 import SocialMediaLink from "../SocialMediaLink";
 import Address from "../Address";
 
@@ -11,7 +10,7 @@ export default class Footer extends React.PureComponent {
                 <Row  >
                     <div className={'footer-bar-gradiant'}></div>
                     <div className={'footer-logo'}>
-                        <img src={Logo} />
+                        <img src='https://s3.amazonaws.com/hwma-images/icon-orange.png' />
                     </div>
 
                 </Row>

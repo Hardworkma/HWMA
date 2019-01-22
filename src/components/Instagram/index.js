@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import Lightbox from 'react-images';
 import Image from './image'
 import '../../styles/app.css'
+import '../../styles/_slick.css'
+import '../../styles/_slick-theme.css'
 
 
 
@@ -113,16 +115,16 @@ export default class Instagram extends React.PureComponent {
     }
 
     fetchPhotos() {
-        fetch('https://api.instagram.com/v1/users/self/media/recent/?access_token=7294883355.f2b7c16.7853b9f73fa041e3a4bb16dcaefd2df5')
-            .then(response => {
-                if(response.ok) {
-                    return response.json()
-                }
-            }).then(data => {
-                this.setState({
-                    photos: data.data
-                })
-        })
+        // fetch('https://api.instagram.com/v1/users/self/media/recent/?access_token=7294883355.f2b7c16.7853b9f73fa041e3a4bb16dcaefd2df5')
+        //     .then(response => {
+        //         if(response.ok) {
+        //             return response.json()
+        //         }
+        //     }).then(data => {
+        //         this.setState({
+        //             photos: data.data
+        //         })
+        // })
     }
 
     render() {

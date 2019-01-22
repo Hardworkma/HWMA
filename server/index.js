@@ -1,43 +1,69 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
-//
-// ReactDOM.render(<App />, document.getElementById('root'));
-// registerServiceWorker();
 
-import path from 'path';
-import fs from 'fs';
 
-import React from 'react';
+// Set up ======================================================================
+// get all the tools we need
 import express from 'express';
-import ReactDOMServer from 'react-dom/server';
+import http from 'http';
+import logger from 'morgan';
+import path from 'path';
+import renderRouterMiddleware from '../middleware/index';
 
-import App from '../src/App';
 
-const PORT = process.env.PORT || 80;
+
+// require('dotenv').config();
+
+// Configuration ===============================================================
 const app = express();
+app.set('port', process.env.PORT || 80);
+app.use(logger('short'));
 
-app.use(express.static('./build'));
+// Request Handlers
+const buildPath = path.join(__dirname, '../', 'build');
 
-app.get('/*', (req, res) => {
-    const app = ReactDOMServer.renderToString(<App/>);
+app.use('/', express.static(buildPath));
 
-    const indexFile = path.resolve('./build/index.html');
-    fs.readFile(indexFile, 'utf8', (err, data) => {
-        if (err) {
-            console.error('Something went wrong:', err);
-            return res.status(500).send('Oops, better luck next time!');
-        }
+app.get('*', renderRouterMiddleware);
 
-        return res.send(
-            data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
-        );
-    });
+// launch ======================================================================
+// Starts the Express server on port 3001 and logs that it has started
+http.createServer(app).listen(app.get('port'), () => {
+    console.log(`Server is listening on port 80`);
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
-});
+module.exports = app;
+
+
+
+// const PORT = process.env.PORT || 80;
+// const app = express();
+//
+// app.use(express.static('./build'));
+//
+// app.get('/*', (req, res) => {
+//     const context = {};
+//
+//     const html = ReactDOMServer.renderToString(
+//         <StaticRouter location={req.url} context={context}>
+//             <App />
+//         </StaticRouter>
+//     );
+//
+//     if (context.url) {
+//         res.writeHead(301, {
+//             Location: context.url
+//         });
+//         res.end();
+//     } else {
+//         console.log(html)
+//         res.write(`
+//       <!doctype html>
+//       <div id="app">${html}</div>
+//     `);
+//         res.end();
+//     }
+// });
+//
+// app.listen(PORT, () => {
+//     console.log(`Server is listening on port ${PORT}`);
+// });
+

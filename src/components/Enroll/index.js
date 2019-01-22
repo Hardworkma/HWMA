@@ -1,6 +1,6 @@
 import React from 'react'
 import { Modal, ModalHeader, ModalBody, Row } from 'reactstrap';
-import Fist from '../../images/fist.gif'
+
 
 export default class Enroll extends React.PureComponent {
     constructor(props) {
@@ -22,7 +22,7 @@ export default class Enroll extends React.PureComponent {
                 <ModalHeader >Redirecting...</ModalHeader>
                 <ModalBody>
                     <Row className={'text-format'}>
-                        <img src={Fist} />
+                        <img src={'https://s3.amazonaws.com/hwma-images/fist.gif'} />
                     </Row>
                 </ModalBody>
 
