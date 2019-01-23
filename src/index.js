@@ -14,7 +14,6 @@ ReactPixel.init('256646485044778', advancedMatching, options);
 
 ReactPixel.pageView();
 
-// ReactDOM.hydrate(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
 const renderRouter = Component => {
     ReactDOM.hydrate(
         <BrowserRouter>
@@ -22,13 +21,7 @@ const renderRouter = Component => {
         </BrowserRouter>, document.getElementById('root')
     );
 };
-// const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
-// renderMethod(
-//     <BrowserRouter>
-//         <Component />
-//     </BrowserRouter>,
-//     document.getElementById('root')
-// );
+
 
 
 renderRouter(App);

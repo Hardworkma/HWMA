@@ -13,10 +13,6 @@ const HTML = (props) => (
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/regular.css" integrity="sha384-ZlNfXjxAqKFWCwMwQFGhmMh3i89dWDnaFU2/VZg9CvsMGA7hXHQsPIqS+JIAmgEq" crossOrigin="anonymous" />
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossOrigin="anonymous" />
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
-            <link rel="stylesheet" href="https://s3.amazonaws.com/hwma-images/App.css" />
-            <link rel="stylesheet" href="https://s3.amazonaws.com/hwma-images/app.css" />
-            <link rel="stylesheet" href="https://s3.amazonaws.com/hwma-images/_slick.css" />
-            <link rel="stylesheet" href="https://s3.amazonaws.com/hwma-images/_slick-theme.css" />
 
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128165463-1"></script>
 

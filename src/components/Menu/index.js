@@ -13,7 +13,7 @@ export default class Menu extends React.PureComponent {
         super(props);
         this.state = {
             showAbout: false,
-            showTour: false,
+            showTrial: false,
             showPrograms: false,
             enroll: false,
         }
@@ -22,8 +22,8 @@ export default class Menu extends React.PureComponent {
         this.hideAbout = this.hideAbout.bind(this);
         this.showPrograms = this.showPrograms.bind(this);
         this.hidePrograms = this.hidePrograms.bind(this);
-        this.showTour = this.showTour.bind(this);
-        this.hideTour = this.hideTour.bind(this);
+        this.showTrial = this.showTrial.bind(this);
+        this.hideTrial = this.hideTrial.bind(this);
         this.menuClick = this.menuClick.bind(this);
         this.enrollClick = this.enrollClick.bind(this);
 
@@ -44,16 +44,17 @@ export default class Menu extends React.PureComponent {
         this.setState({showPrograms:false});
     }
 
-    showTour() {
-        this.setState({showTour:true});
+    showTrial() {
+        this.setState({showTrial:true});
     }
 
-    hideTour() {
-        this.setState({showTour:false});
+    hideTrial() {
+        this.setState({showTrial:false});
     }
     menuClick() {
         this.hideAbout();
         this.hidePrograms();
+        this.hideTrial()
     }
 
     enrollClick() {
@@ -63,9 +64,20 @@ export default class Menu extends React.PureComponent {
     render() {
         let styleAbout = (this.state.showAbout)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
         let stylePrograms = (this.state.showPrograms)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
+        let styleTrial = (this.state.showTrial)?{opacity:1, marginLeft:'auto', marginRight:'auto'}:{visibility:'hidden', opacity:0,  marginLeft:'auto', marginRight:'auto'}
         return (
             <div className={'links text-right to-right'}>
                 <ul className={'links-menu horizontal list-inline'}>
+                    <li className={'header-link list-inline-item menu-link'}>
+                        <a href={'#'} onMouseEnter={this.showTrial} onMouseLeave={this.hideTrial} className={'no-underline'}>
+                            Trial <i className="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <div className={'sub-menu'} style={styleTrial} onMouseEnter={this.showTrial} onMouseLeave={this.hideTrial}>
+                            <Row>
+                                <iframe src={'https://www.mystudio.academy/t/?=hwma/1988'}></iframe>
+                            </Row>
+                        </div>
+                    </li>
                     <li className={'header-link list-inline-item'}>
                         <a href={'#'} onClick={this.enrollClick} className={'no-underline'}>
                             Enroll
