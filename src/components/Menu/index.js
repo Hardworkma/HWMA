@@ -69,7 +69,7 @@ export default class Menu extends React.PureComponent {
             <div className={'links text-right to-right'}>
                 <ul className={'links-menu horizontal list-inline'}>
                     <li className={'header-link list-inline-item menu-link'}>
-                        <a href={'#'} onMouseEnter={this.showMembership} onMouseLeave={this.hideMember} className={'no-underline'}>
+                        <a href={'#'} onMouseEnter={this.showMembership} onMouseLeave={this.hideMembership} className={'no-underline'}>
                             Membership <i className="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                         <div className={'sub-menu'} style={styleMembership} onMouseEnter={this.showMembership} onMouseLeave={this.hideMembership}>
