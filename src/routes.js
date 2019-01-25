@@ -43,7 +43,7 @@ const routes = [
                 component: FAQPage
             },
             {
-                path: '/hardworkheros',
+                path: '/hardworkheroes',
                 component: HardWorkHeroesPage
             },
             {

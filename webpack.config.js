@@ -1,6 +1,5 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     entry: './src/index.js',
@@ -23,7 +22,8 @@ module.exports = {
                     loader: "babel-loader"
                 }
             },
-            { test:/\.(s*)css$/,
+            {
+                test: /\.(s*)css$/,
                 use: [
                     "style-loader", // creates style nodes from JS strings
                     "css-loader", // translates CSS into CommonJS
@@ -42,7 +42,6 @@ module.exports = {
             //     test: /\.less$/,
             //     loader: 'less-loader' // compiles Less to CSS
             // },
-
             // {
             //     test: /\.(png|svg|jpg|gif)$/,
             //     use: [
@@ -66,16 +65,7 @@ module.exports = {
                     'file-loader'
                 ]
             },
-
         ],
-
-    },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[id].css"
-        })
-    ]
-
+    }
 
 };
