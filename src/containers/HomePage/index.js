@@ -27,7 +27,7 @@ export default class HomePage extends React.PureComponent {
                     <div className={cardMiddle}>
                         <Title title={'Welcome'}/>
                         <br/>
-                        <iframe width="100%" height="550" src="https://www.youtube.com/embed/10D45JTg2W8"
+                        <iframe width="100%" height="550" src="https://www.youtube.com/embed/qX7r_DqP8v0"
                                 frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                     </div>
                     <div className={cardRight}>
