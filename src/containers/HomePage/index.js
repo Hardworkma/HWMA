@@ -1,6 +1,5 @@
 import React from 'react'
 import {Row} from 'reactstrap'
-import FreeTrial from '../../components/FreeTrial/index';
 import Home from '../../components/Home/index'
 import Twitter from "../../components/Twitter";
 import Instagram from "../../components/Instagram";
@@ -8,7 +7,6 @@ import Title from '../../components/Title/index';
 
 export default class HomePage extends React.PureComponent {
     render() {
-        let cardLeft = (typeof(window) !== "undefined" && window.innerWidth < 400) ? 'card' : 'card card-left'
         let cardMiddle = (typeof(window) !== "undefined" && window.innerWidth < 400) ? 'card' : 'card card-middle'
         let cardRight = (typeof(window) !== "undefined" && window.innerWidth < 400) ? 'card' : 'card card-right'
 
@@ -19,11 +17,6 @@ export default class HomePage extends React.PureComponent {
                     <Home/>
                 </Row>
                 <Row className={'wrapper'}>
-                    <div className={cardLeft}>
-                        <Title title={'Free Trial'}/>
-                        <br/>
-                        <FreeTrial/>
-                    </div>
                     <div className={cardMiddle}>
                         <Title title={'Welcome'}/>
                         <br/>
