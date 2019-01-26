@@ -64,10 +64,6 @@ const routes = [
                 component: TaekwondoPage
             },
             {
-                path: '/thankyou',
-                component: ThankYouPage
-            },
-            {
                 path: '/welcome',
                 component: WelcomePage
             },
