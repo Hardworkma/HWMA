@@ -34,10 +34,11 @@
     opacity: .4;
 }
 
-.home {
+ .thankyou {
     background-color: black;
     max-height: 300px;
 }
+
 
 #blackbelt.container {
     position: relative;
