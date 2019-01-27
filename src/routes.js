@@ -10,7 +10,6 @@ import CoreValuesPage from "./containers/CoreValuesPage";
 import ReviewsPage from "./containers/ReviewsPage";
 import PhilosophyPage from "./containers/PhilosophyPage";
 import HardWorkHeroesPage from "./containers/HardWorkHeroesPage";
-import ThankYouPage from "./containers/ThankYouPage";
 import FAQPage from "./containers/FAQPage";
 import React from "react";
 

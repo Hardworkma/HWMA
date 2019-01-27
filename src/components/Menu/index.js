@@ -74,7 +74,7 @@ export default class Menu extends React.PureComponent {
                             Membership <i className="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                         <div className={'sub-menu'} style={styleMembership} onMouseEnter={this.showMembership} onMouseLeave={this.hideMembership}>
-                            <Membership/>
+                           <Membership/>
                         </div>
                     </li>
                     <li className={'header-link list-inline-item menu-link'}>
