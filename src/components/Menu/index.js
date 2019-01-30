@@ -14,7 +14,7 @@ export default class Menu extends React.PureComponent {
         super(props);
         this.state = {
             showAbout: false,
-            showMembership: false,
+            showMembership: true,
             showPrograms: false,
             enroll: false,
         }
@@ -50,7 +50,7 @@ export default class Menu extends React.PureComponent {
     }
 
     hideMembership() {
-        this.setState({showMembership:false});
+        // this.setState({showMembership:false});
     }
     menuClick() {
         this.hideAbout();

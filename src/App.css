@@ -228,6 +228,19 @@
     left: 41.5%;
 }
 
+.membership-tab-active {
+    color: #E75924;
+    background-color: #F9F9F9;
+}
+.nav-link.active {
+    background-color: #F9F9F9 !important;
+    border-bottom-color: #F9F9F9 !important;
+}
+
+.membership-tab {
+    color: #ccc;
+}
+
 .wapper {
     margin-right: auto;
     margin-left: auto;

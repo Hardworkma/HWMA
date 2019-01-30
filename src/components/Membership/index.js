@@ -20,6 +20,9 @@ export default class Membership extends React.PureComponent {
         }
     }
     render() {
+        let tab1 = (this.state.activeTab === '1') ? 'membership-tab-active' : 'membership-tab'
+        let tab2 = (this.state.activeTab === '2') ? 'membership-tab-active' : 'membership-tab'
+        let tab3 = (this.state.activeTab === '3') ? 'membership-tab-active' : 'membership-tab'
         return (
             <div>
                 <Nav tabs>
@@ -28,7 +31,7 @@ export default class Membership extends React.PureComponent {
                             className={{ active: this.state.activeTab === '1' }}
                             onClick={() => { this.toggle('1'); }}
                         >
-                            Memberships
+                            <span className={tab1}> Memberships</span>
                         </NavLink>
                     </NavItem>
                     <NavItem>
@@ -36,7 +39,7 @@ export default class Membership extends React.PureComponent {
                             className={{ active: this.state.activeTab === '2' }}
                             onClick={() => { this.toggle('2'); }}
                         >
-                            Events & Camps
+                            <span className={tab2}> Events & Camps</span>
                         </NavLink>
                     </NavItem>
                     <NavItem>
@@ -44,7 +47,7 @@ export default class Membership extends React.PureComponent {
                             className={{ active: this.state.activeTab === '3' }}
                             onClick={() => { this.toggle('3'); }}
                         >
-                            Trial Options
+                            <span className={tab3}>Trial Options</span>
                         </NavLink>
                     </NavItem>
                 </Nav>
