@@ -11,6 +11,7 @@ import ReviewsPage from "./containers/ReviewsPage";
 import PhilosophyPage from "./containers/PhilosophyPage";
 import HardWorkHeroesPage from "./containers/HardWorkHeroesPage";
 import FAQPage from "./containers/FAQPage";
+import SchedulePage from "./containers/SchedulePage"
 import WhyPage from "./containers/WhyPage";
 import React from "react";
 
@@ -58,6 +59,10 @@ const routes = [
             {
                 path: '/sidekicks',
                 component: SideKicksPage
+            },
+            {
+                path: '/schedule',
+                component: SchedulePage
             },
             {
                 path: '/taekwondo',
