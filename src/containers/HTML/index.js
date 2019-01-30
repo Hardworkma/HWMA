@@ -16,7 +16,7 @@ const HTML = (props) => (
                 mats. To prepare them physically, to give them skills capable of keeping
                 themselves and those they care about safe. To prepare them mentally, to
                 understand that determination and hard work afford them opportunities
-                for success.">
+                for success." />
             <meta name="keywords" content="HWMA Sterling VA, Hard Work Martial Arts,
                 Martial Arts, Sterling, Tae Kown Do, Taekwondo, Northern
                 Virginia Taekwondo, Norther Virginia Martial Arts, After School, Martial
@@ -24,7 +24,7 @@ const HTML = (props) => (
                 VA, Summer Camps in Sterling VA, Taekwondo for kids in Sterling VA,
                 Taekwondo for adults in Sterling VA, After School programs in Sterling
                 VA, Martial Arts Birthday Parties in Sterling VA, Bully Prevention in
-                Sterling VA, Summer camp in Sterling VA">
+                Sterling VA, Summer camp in Sterling VA" />
 
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossOrigin="anonymous" />
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossOrigin="anonymous" />
