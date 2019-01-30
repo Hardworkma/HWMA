@@ -11,6 +11,7 @@ import ReviewsPage from "./containers/ReviewsPage";
 import PhilosophyPage from "./containers/PhilosophyPage";
 import HardWorkHeroesPage from "./containers/HardWorkHeroesPage";
 import FAQPage from "./containers/FAQPage";
+import WhyPage from "./containers/WhyPage";
 import React from "react";
 
 const routes = [
@@ -65,6 +66,10 @@ const routes = [
             {
                 path: '/welcome',
                 component: WelcomePage
+            },
+            {
+                path: '/why',
+                component: WhyPage
             },
         ]
     }
