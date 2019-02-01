@@ -364,6 +364,10 @@ li.menu-item {
     padding-top: 25px;
 }
 
+.adult-tkd-format {
+    padding-right: 15%;
+}
+
 .thumbnail-scroll {
     width:30px;
     position: relative;

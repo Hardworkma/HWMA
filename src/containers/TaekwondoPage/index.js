@@ -9,7 +9,7 @@ export default class TaekwondoPage extends React.PureComponent {
     }
     render() {
 
-        var title = (this.props.match.params.age == 16) ? "Adult Taekwondo" : 'Taekwondo'
+        var title = (this.props.match.params.age == 16) ? "Adult Taekwondo (16+ y/o)" : 'Childrens Taekwondo (7-15 y/o)'
         return (
             <div>
                 <Row className={'wrapper'}>
