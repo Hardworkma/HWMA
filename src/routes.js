@@ -60,7 +60,7 @@ const routes = [
                 component: SideKicksPage
             },
             {
-                path: '/taekwondo',
+                path: '/taekwondo/:age',
                 component: TaekwondoPage
             },
             {
