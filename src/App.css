@@ -358,6 +358,47 @@ li.menu-item {
     left: 53%;
 }
 
+.why-card {
+    float: left;
+    display: block;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background-clip: padding-box;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: #FFFFFF;
+    margin-bottom: 5px;
+    position: relative;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 140px;
+}
+
+.why-card-title {
+    background-color: #E75924;
+
+}
+.why-card-title>span {
+    text-align: center;
+    font-family: futura;
+    color: black;
+    font-size: 24px;
+
+}
+
+.why-card-content {
+    text-align: center;
+    font-family: futura;
+    color: black;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.12);
+}
+
+.why-hwma-logo {
+    height: 100px;
+}
+
 .text-format {
     display: flex;
     justify-content: center;

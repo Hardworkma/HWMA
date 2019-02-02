@@ -1,4 +1,5 @@
 import React from 'react'
+import {Container, Col, Row} from 'reactstrap'
 import CollapsingCard from "../CollapsingCard";
 
 export default class Why extends React.PureComponent{
@@ -48,13 +49,111 @@ export default class Why extends React.PureComponent{
 
 
         return (
-            <div className={'wrapper'}>
-                <CollapsingCard cardClass={'faq-card'} title={title_1} titleClass={'faq-title'} body={body_1}/>
-                <CollapsingCard cardClass={'faq-card'} title={title_2} titleClass={'faq-title'} body={body_2}/>
-                <CollapsingCard cardClass={'faq-card'} title={title_3} titleClass={'faq-title'} body={body_3}/>
-                <CollapsingCard cardClass={'faq-card'} title={title_4} titleClass={'faq-title'} body={body_4}/>
-                <CollapsingCard cardClass={'faq-card'} title={title_5} titleClass={'faq-title'} body={body_5}/>
-            </div>
+            <Container>
+                <Row>
+                    <Col className={'why-card'}></Col>
+                    <Col className={'why-card why-card-title '}><img className={'why-hwma-logo'} src={'https://s3.amazonaws.com/hwma-images/BW_HWMA_Logo.png'} /></Col>
+                    <Col className={'why-card why-card-title'}>Other Studios</Col>
+                </Row>
+                <Row>
+                    <Col className={'why-card why-card-title align-self-center'}><span >Amenities</span></Col>
+                    <Col className={'why-card why-card-content'}>
+                        Olympic grade floors and equipment
+                        <br/>
+                        Weight room, Changing room
+                        <br/>
+                        Modular use walls & design
+                    </Col>
+                    <Col className={'why-card why-card-content'}>
+                        Padding floors and equipment
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className={'why-card why-card-title'}>Certifications</Col>
+                    <Col className={'why-card why-card-content'}>
+                        Coaching Certifications: Kukkiwon, USAT,
+                        <br/>
+                        SafeSport & NASM. Background Checks
+                        <br/>
+                        Early Child Development Education
+                        <br/>
+                        CPR, First Aid, & AED Certified
+                    </Col>
+                    <Col className={'why-card why-card-content'}>
+                        Local or Kukkiwon Ranking
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className={'why-card why-card-title'}>Experience</Col>
+                    <Col className={'why-card why-card-content'}>
+                        30+ years training
+                        <br/>
+                        15+ years teaching experience
+                        <br/>
+                        Trained National & Olympic competitors
+                        <br/>
+                        Hand to Hand Instructor for Military, Police
+                        <br/>
+                        & Security Programs
+                    </Col>
+                    <Col className={'why-card why-card-content'}>
+                        5 - 15 years training
+                        <br/>
+                        0 - 8 years teaching experience
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className={'why-card why-card-title'}>Schedule</Col>
+                    <Col className={'why-card why-card-content'}>
+                        5 classes offered per day
+                        <br/>
+                        Open 6 days a week
+                        <br/>
+                        Unlimited attendance
+                        <br/>
+                        Small personalized classes
+                    </Col>
+                    <Col className={'why-card why-card-content'}>
+                        2 - 3 classed offered per day
+                        <br/>
+                        Open 5 - 6 days a week
+                        <br/>
+                        Attendance limited to 2 - 4 classes per week
+                        <br/>
+                        Overly full class sizes
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className={'why-card why-card-title'}>Price & Fees</Col>
+                    <Col className={'why-card why-card-content'}>
+                        $149 average (monthly)
+                        <br/>
+                        FREE Testing
+                        <br/>
+                        FREE Equipment
+                        <br/>
+                        FREE Uniform
+                    </Col>
+                    <Col className={'why-card why-card-content'}>
+                        $135 - $155 average (monthly)
+                        <br/>
+                        Recurring test fees of $50 - $200
+                        <br/>
+                        $200 Equipment fees
+                        <br/>
+                        $50 Uniform cost
+                    </Col>
+                </Row>
+                <br/>
+                <br/>
+                <Row className={'wrapper'}>
+                    <CollapsingCard cardClass={'faq-card'} title={title_1} titleClass={'faq-title'} body={body_1}/>
+                    <CollapsingCard cardClass={'faq-card'} title={title_2} titleClass={'faq-title'} body={body_2}/>
+                    <CollapsingCard cardClass={'faq-card'} title={title_3} titleClass={'faq-title'} body={body_3}/>
+                    <CollapsingCard cardClass={'faq-card'} title={title_4} titleClass={'faq-title'} body={body_4}/>
+                    <CollapsingCard cardClass={'faq-card'} title={title_5} titleClass={'faq-title'} body={body_5}/>
+                </Row>
+            </Container>
         )
     }
 }
