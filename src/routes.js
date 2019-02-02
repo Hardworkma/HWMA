@@ -76,5 +76,7 @@ const routes = [
                 path: '/why',
                 component: WhyPage
             },
+        ]
+    }
 ];
 export default routes;

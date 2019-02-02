@@ -358,6 +358,11 @@ li.menu-item {
     left: 53%;
 }
 
+.thankyou {
+    background-color: black;
+    min-height: 400px !important;
+}
+
 .why-card {
     float: left;
     display: block;
@@ -455,7 +460,7 @@ li.menu-item {
     justifyContent: 'center';
 }
 
-#thankyou #footer {
+.footer-thankyou {
     margin-top: 0px !important;
 }
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import {Row} from 'reactstrap'
-import Welcome from '../../components/Welcome/index'
-import Title from "../../components/Title";
+
 
 export default class ThankYou extends React.PureComponent {
     render() {

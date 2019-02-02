@@ -2,12 +2,17 @@ import React from 'react';
 import {Col, Row} from 'reactstrap'
 import SocialMediaLink from "../SocialMediaLink";
 import Address from "../Address";
+import MobileMenu from "../MobileMenu";
+import Menu from "../Menu";
 
 export default class Footer extends React.PureComponent {
     render() {
-
+        if(typeof(window) !== "undefined") {
+            console.log(window.location.href)
+        }
+        let footerClass = (typeof(window) !== "undefined" && window.location.href.includes('/thankyou')) ? 'footer footer-thankyou' : 'footer'
         return(
-            <div id='footer' className={'footer'}>
+            <div id='footer' className={footerClass}>
                 <Row  >
                     <div className={'footer-bar-gradiant'}></div>
                     <div className={'footer-logo'}>

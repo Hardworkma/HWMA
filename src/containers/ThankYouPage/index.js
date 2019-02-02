@@ -7,7 +7,7 @@ import Home from "../../components/Home";
 export default class ThankYouPage extends React.PureComponent {
     render() {
         return (
-            <Row className={'home'}>
+            <Row className={'thankyou'}>
                 <ThankYou/>
             </Row>
 
