@@ -11,6 +11,7 @@ import ReviewsPage from "./containers/ReviewsPage";
 import PhilosophyPage from "./containers/PhilosophyPage";
 import HardWorkHeroesPage from "./containers/HardWorkHeroesPage";
 import FAQPage from "./containers/FAQPage";
+import ThankYouPage from "./containers/ThankYouPage"
 import WhyPage from "./containers/WhyPage";
 import React from "react";
 
@@ -64,6 +65,10 @@ const routes = [
                 component: TaekwondoPage
             },
             {
+                path: '/thankyou',
+                component: ThankYouPage
+            },
+            {
                 path: '/welcome',
                 component: WelcomePage
             },
@@ -74,5 +79,4 @@ const routes = [
         ]
     }
 ];
-
 export default routes;

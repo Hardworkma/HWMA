@@ -358,6 +358,11 @@ li.menu-item {
     left: 53%;
 }
 
+.thankyou {
+    background-color: black;
+    min-height: 400px !important;
+}
+
 .why-card {
     float: left;
     display: block;
@@ -453,6 +458,10 @@ li.menu-item {
 .footer-copyright {
     display: flex;
     justifyContent: 'center';
+}
+
+.footer-thankyou {
+    margin-top: 0px !important;
 }
 
 #footer {
