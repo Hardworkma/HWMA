@@ -3,16 +3,10 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     entry: './src/index.js',
-    // externals: [nodeExternals()],
-    // output: {
-    //     path: path.resolve('server-build'),
-    //     filename: 'index.js'
-    // },
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: '[name].bundle.js',
     },
-
     module: {
         rules: [
             {
@@ -30,24 +24,6 @@ module.exports = {
                     "sass-loader" // compiles Sass to CSS, using Node Sass by default
                 ]
             },
-            // {
-            //     test: /\.css$/,
-            //     use: [MiniCssExtractPlugin.loader, "css-loader"]
-            // },
-            // {
-            //     test: /\.css$/,
-            //     use:  [  'style-loader', 'css-loader']
-            // },
-            // {
-            //     test: /\.less$/,
-            //     loader: 'less-loader' // compiles Less to CSS
-            // },
-            // {
-            //     test: /\.(png|svg|jpg|gif)$/,
-            //     use: [
-            //         'file-loader'
-            //     ]
-            // },
             {
                 test: /\.(png|jpg|gif|svg)$/,
                 use: [
@@ -67,5 +43,4 @@ module.exports = {
             },
         ],
     }
-
 };

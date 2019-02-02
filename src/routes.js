@@ -12,6 +12,7 @@ import PhilosophyPage from "./containers/PhilosophyPage";
 import HardWorkHeroesPage from "./containers/HardWorkHeroesPage";
 import FAQPage from "./containers/FAQPage";
 import ThankYouPage from "./containers/ThankYouPage"
+import WhyPage from "./containers/WhyPage";
 import React from "react";
 
 const routes = [
@@ -60,7 +61,7 @@ const routes = [
                 component: SideKicksPage
             },
             {
-                path: '/taekwondo',
+                path: '/taekwondo/:age',
                 component: TaekwondoPage
             },
             {
@@ -70,6 +71,10 @@ const routes = [
             {
                 path: '/welcome',
                 component: WelcomePage
+            },
+            {
+                path: '/why',
+                component: WhyPage
             },
         ]
     }
