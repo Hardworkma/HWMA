@@ -410,6 +410,10 @@ li.menu-item {
     justifyContent: 'center';
 }
 
+#thankyou #footer {
+    margin-top: 0px !important;
+}
+
 #footer {
     min-height: 180px;
     background-color: #EBEBEB;

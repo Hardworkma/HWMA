@@ -5,6 +5,7 @@ import Address from "../Address";
 
 export default class Footer extends React.PureComponent {
     render() {
+
         return(
             <div id='footer' className={'footer'}>
                 <Row  >
