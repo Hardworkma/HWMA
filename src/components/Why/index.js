@@ -1,4 +1,5 @@
 import React from 'react'
+import {Container, Col, Row} from 'reactstrap'
 import CollapsingCard from "../CollapsingCard";
 
 export default class Why extends React.PureComponent{
@@ -48,13 +49,20 @@ export default class Why extends React.PureComponent{
 
 
         return (
-            <div className={'wrapper'}>
-                <CollapsingCard cardClass={'faq-card'} title={title_1} titleClass={'faq-title'} body={body_1}/>
-                <CollapsingCard cardClass={'faq-card'} title={title_2} titleClass={'faq-title'} body={body_2}/>
-                <CollapsingCard cardClass={'faq-card'} title={title_3} titleClass={'faq-title'} body={body_3}/>
-                <CollapsingCard cardClass={'faq-card'} title={title_4} titleClass={'faq-title'} body={body_4}/>
-                <CollapsingCard cardClass={'faq-card'} title={title_5} titleClass={'faq-title'} body={body_5}/>
-            </div>
+            <Container>
+                <Row>
+                    <img className={'why_hwma_img'} src={'https://s3.amazonaws.com/hwma-images/UsThem.png'} />
+                </Row>
+                                <br/>
+                <br/>
+                <Row className={'wrapper'}>
+                    <CollapsingCard cardClass={'faq-card'} title={title_1} titleClass={'faq-title'} body={body_1}/>
+                    <CollapsingCard cardClass={'faq-card'} title={title_2} titleClass={'faq-title'} body={body_2}/>
+                    <CollapsingCard cardClass={'faq-card'} title={title_3} titleClass={'faq-title'} body={body_3}/>
+                    <CollapsingCard cardClass={'faq-card'} title={title_4} titleClass={'faq-title'} body={body_4}/>
+                    <CollapsingCard cardClass={'faq-card'} title={title_5} titleClass={'faq-title'} body={body_5}/>
+                </Row>
+            </Container>
         )
     }
 }
