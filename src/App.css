@@ -39,6 +39,7 @@
     max-height: 300px;
 }
 
+
 #blackbelt.container {
     position: relative;
     text-align: center;
@@ -225,6 +226,19 @@
 .sub-menu-email {
     position: relative;
     left: 41.5%;
+}
+
+.membership-tab-active {
+    color: #E75924;
+    background-color: #F9F9F9;
+}
+.nav-link.active {
+    background-color: #F9F9F9 !important;
+    border-bottom-color: #F9F9F9 !important;
+}
+
+.membership-tab {
+    color: #ccc;
 }
 
 .wapper {

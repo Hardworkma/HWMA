@@ -6,6 +6,7 @@ import InfoLinks from "../InfoLinks";
 import ProgramLinks from "../ProgramLinks";
 import Address from "../Address";
 import Enroll from "../Enroll";
+import Membership from "../Membership";
 
 
 export default class Menu extends React.PureComponent {
@@ -73,16 +74,8 @@ export default class Menu extends React.PureComponent {
                             Membership <i className="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                         <div className={'sub-menu'} style={styleMembership} onMouseEnter={this.showMembership} onMouseLeave={this.hideMembership}>
-                            <Row>
-                                <iframe className={'sub-menu'}  src={'https://www.mystudio.academy/t/?=hwma/1988'}></iframe>
-                            </Row>
+                           <Membership/>
                         </div>
-                    </li>
-                    <li className={'header-link list-inline-item'}>
-                        <a href={'#'} onClick={this.enrollClick} className={'no-underline'}>
-                            Enroll
-                        </a>
-                        <Enroll showEnroll={this.state.enroll}/>
                     </li>
                     <li className={'header-link list-inline-item menu-link'}>
                         <a href={'#'} onMouseEnter={this.showAbout} onMouseLeave={this.hideAbout} className={'no-underline'}>
