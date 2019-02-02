@@ -8,6 +8,24 @@ const HTML = (props) => (
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="google-site-verification" content="XDO08zzVwtPc_UDmrhAaueh6-N43wRXI_HcfjvOfl44" />
             <meta name="theme-color" content="#000000" />
+            <meta name="description" content="Our goal is to bring out the best in
+                our students through practicing martial arts. To teach that through hard
+                work, goals can be accomplished, through determination progress can be
+                made, with courage, fear can be overcome.  Ultimately our goal is to
+                teach skills that are applicable in every day life, both on and off the
+                mats. To prepare them physically, to give them skills capable of keeping
+                themselves and those they care about safe. To prepare them mentally, to
+                understand that determination and hard work afford them opportunities
+                for success." />
+            <meta name="keywords" content="HWMA Sterling VA, Hard Work Martial Arts,
+                Martial Arts, Sterling, Tae Kown Do, Taekwondo, Northern
+                Virginia Taekwondo, Norther Virginia Martial Arts, After School, Martial
+                arts for children in Sterling VA, martial arts for adults in Sterling
+                VA, Summer Camps in Sterling VA, Taekwondo for kids in Sterling VA,
+                Taekwondo for adults in Sterling VA, After School programs in Sterling
+                VA, Martial Arts Birthday Parties in Sterling VA, Bully Prevention in
+                Sterling VA, Summer camp in Sterling VA" />
+
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossOrigin="anonymous" />
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossOrigin="anonymous" />
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/regular.css" integrity="sha384-ZlNfXjxAqKFWCwMwQFGhmMh3i89dWDnaFU2/VZg9CvsMGA7hXHQsPIqS+JIAmgEq" crossOrigin="anonymous" />
