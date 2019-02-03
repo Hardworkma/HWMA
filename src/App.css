@@ -611,6 +611,12 @@ div.menu {
     #blackbelt-img {
         width: 100%;
     }
+    .card-middle {
+        width: 100%;
+    }
+    .card-right {
+        width: 100%;
+    }
 }
 
 /*
