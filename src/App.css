@@ -608,6 +608,9 @@ div.menu {
         position: relative;
         left: 15.5%;
     }
+    #blackbelt-img {
+        width: 100%;
+    }
 }
 
 /*

@@ -16,7 +16,14 @@ export default class HomePage extends React.PureComponent {
                 <Row className={'home'}>
                     <Home/>
                 </Row>
-                <Row className={'wrapper'}>
+
+            </div>
+        )
+    }
+}
+
+/*
+<Row className={'wrapper'}>
                     <div className={cardMiddle}>
                         <Title title={'Welcome'}/>
                         <br/>
@@ -32,7 +39,4 @@ export default class HomePage extends React.PureComponent {
                 <div className={'ig-feed'}>
                     <Instagram />
                 </div>
-            </div>
-        )
-    }
-}
+ */
