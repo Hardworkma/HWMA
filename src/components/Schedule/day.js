@@ -8,27 +8,21 @@ export default class Day extends React.PureComponent {
         super(props)
     }
     render() {
-        console.log(this.props.day.classes)
-
         let classes = this.props.day.classes.map(function(clazz, index) {
             let className = (index % 2 != 0) ? 'schedule-class schedule-class-shade' : 'schedule-class'
             return <Class clazz={clazz} className={className} />
         })
         return (
-            <Row className={'schedule-day'}>
+            <Row className={'schedule-day-row'}>
                 <Col className={'col-2'} />
-                <Col className={'col-3'}>
-                    <Row>
-                        <Col>{this.props.day.day}</Col>
-                    </Row>
-                    <Row>
-                        <Col>{this.props.day.type}</Col>
-                    </Row>
+                <Col className={'col-2 align-self-center'}>
+                    <span className={'schedule-day-title'}> {this.props.day.day}</span>
+                    <br/>
+                    <span className={'schedule-day-type'}> {this.props.day.type}</span>
                 </Col>
                 <Col className={'col-6'}>
                     {classes}
                 </Col>
-                <Col className={'col-1'} />
             </Row>
         );
     }

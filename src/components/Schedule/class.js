@@ -6,11 +6,10 @@ export default class Class extends React.PureComponent {
         super(props)
     }
     render() {
-        console.log(this.props)
         return (
             <Row className={this.props.className}>
                 <Col className={'col-3'}>{this.props.clazz.time}</Col>
-                <Col>{this.props.clazz.clazz}</Col>
+                <Col className={'col-6'}>{this.props.clazz.clazz}</Col>
             </Row>
         );
     }
