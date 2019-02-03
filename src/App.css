@@ -348,6 +348,20 @@ li.menu-item {
     color: white;
 }
 
+.schedule-day {
+    /*margin-bottom: 5%;*/
+    border-bottom: 1px solid #E75924;
+}
+
+.schedule-class-shade {
+    /*margin-bottom: 5%;*/
+    background-color: #EBEBEB;
+}
+
+.schedule-class {
+    margin-bottom: 1.5%;
+}
+
 .social-link {
     height:30px;
     width:30px;
