@@ -555,6 +555,41 @@ div.menu {
     .logo {
         width: 100%;
     }
+    .mobile-menu-icon{
+        font-size: 24px;
+        margin-left: .5em;
+    }
+    .mobile-menu {
+        background-color: #F9F9F9;
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        left: 10vw;
+        visibility: hidden;
+        opacity: 0;
+        margin-left: .5%;
+    }
+    .mobile-menu.is-active {
+        -webkit-transform: translate(-100vw);
+        -ms-transform: translate(-100vw);
+        transform: translate(-10vw);
+        visibility: visible;
+        opacity: 1;
+
+    }
+    .mobile-menu-card {
+        width: 95%;
+        margin-left: 1.5%;
+    }
+    .mobile-menu-title {
+        margin-left: 2%;
+    }
+    .card {
+        margin-top: 0px;
+        margin-bottom: 3%;
+    }
 }
 
 /*
