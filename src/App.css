@@ -8,8 +8,9 @@
 .logo {
     height: 140px;
     margin-top:10px;
-    margin-left:120px
+    margin-left:-3%;
 }
+
 
 .header {
     position: relative;
@@ -526,10 +527,40 @@ div.menu {
 .slick-prev:before, .slick-next:before {
     color: black !important;
 }
+/* iPhone 5 */
+@media (min-width: 320px) and (max-width: 359px)  {
+
+    #blackbelt-img {
+        width: 100%;
+    }
+}
+/* Galaxy S3-9 */
+@media (min-width: 360px) and (max-width: 374px)  {
+
+}
+/* iPhone 6/7 */
+@media (min-width: 375px) and (max-width: 411px)  {
+
+}
+/* iPhone 6/7+ */
+@media (min-width: 412px) and (max-width: 479px)  {
+
+}
+/* Note 5 */
+@media (min-width: 480px) and (max-width: 767px)  {
+
+}
+/* all mobile devices */
+@media (min-width: 320px) and (max-width: 767px)  {
+    .logo {
+        width: 100%;
+    }
+}
 
 /*
 
  */
+/*
 @media only screen
 and (max-device-width : 320px) {
     .header .home .footer  {
@@ -676,9 +707,9 @@ and (max-device-width : 320px) {
 
 }
 
-/*
+!*
 
- */
+ *!
 @media only screen
 and (device-width : 360px) {
     .header .home .footer  {
@@ -812,9 +843,9 @@ and (device-width : 360px) {
     }
 }
 
-/*
+!*
 
- */
+ *!
 @media only screen
 and (device-width : 411px) {
     .header .home .footer  {
@@ -950,9 +981,9 @@ and (device-width : 411px) {
 
 
 
-/*
+!*
 iPhone 6, 6S, 7 and 8
- */
+ *!
 @media only screen
 and (device-width : 375px)
 and (device-height : 667px) {
@@ -1102,9 +1133,9 @@ and (device-height : 667px) {
     }
 }
 
-/*
+!*
 tablet
- */
+ *!
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)  {
@@ -1124,4 +1155,4 @@ and (max-device-width : 1024px)  {
     .card-right {
         width: 100%;
     }
-}
+}*/

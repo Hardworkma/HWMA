@@ -20,15 +20,15 @@ export default class Membership extends React.PureComponent {
         }
     }
     render() {
-        let tab1 = (this.state.activeTab === '1') ? 'membership-tab-active' : 'membership-tab'
-        let tab2 = (this.state.activeTab === '2') ? 'membership-tab-active' : 'membership-tab'
-        let tab3 = (this.state.activeTab === '3') ? 'membership-tab-active' : 'membership-tab'
+        let tab1 = (this.state.activeTab === '1') ? 'membership-tab-active active' : 'membership-tab'
+        let tab2 = (this.state.activeTab === '2') ? 'membership-tab-active active' : 'membership-tab'
+        let tab3 = (this.state.activeTab === '3') ? 'membership-tab-active active' : 'membership-tab'
         return (
             <div>
                 <Nav tabs>
                     <NavItem>
                         <NavLink
-                            className={{ active: this.state.activeTab === '1' }}
+                            className={tab1}
                             onClick={() => { this.toggle('1'); }}
                         >
                             <span className={tab1}> Memberships</span>
@@ -36,7 +36,7 @@ export default class Membership extends React.PureComponent {
                     </NavItem>
                     <NavItem>
                         <NavLink
-                            className={{ active: this.state.activeTab === '2' }}
+                            className={tab2}
                             onClick={() => { this.toggle('2'); }}
                         >
                             <span className={tab2}> Events & Camps</span>
@@ -44,7 +44,7 @@ export default class Membership extends React.PureComponent {
                     </NavItem>
                     <NavItem>
                         <NavLink
-                            className={{ active: this.state.activeTab === '3' }}
+                            className={tab3}
                             onClick={() => { this.toggle('3'); }}
                         >
                             <span className={tab3}>Trial Options</span>

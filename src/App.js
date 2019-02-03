@@ -9,10 +9,10 @@ import './styles/_slick.css'
 import './styles/_slick-theme.css'
 
 const App = () => (
-    <div className="container-fluid container">
+    <div className=" container">
         <Header />
-        {renderRoutes(routes)}
-        <Footer/>
+        {/*{renderRoutes(routes)}
+        <Footer/>*/}
     </div>
 );
 
