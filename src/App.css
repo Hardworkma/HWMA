@@ -577,7 +577,6 @@ div.menu {
         transform: translate(-10vw);
         visibility: visible;
         opacity: 1;
-
     }
     .mobile-menu-card {
         width: 95%;
@@ -589,6 +588,25 @@ div.menu {
     .card {
         margin-top: 0px;
         margin-bottom: 3%;
+    }
+    .sub-menu-address {
+        position: relative;
+        left: 14%;
+    }
+
+    .sub-menu-address1 {
+        position: relative;
+        left: 16.5%;
+    }
+
+    .sub-menu-phone {
+        position: relative;
+        left: 26%;
+    }
+
+    .sub-menu-email {
+        position: relative;
+        left: 15.5%;
     }
 }
 

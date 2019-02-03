@@ -35,13 +35,13 @@ export default class MobileMenu extends React.PureComponent {
             iconClass += ' fas fa-bars hamburger'
             menuText =  '  Menu'
         }
-        // let contact = <div>
-        //                 <Address addClass={'sub-menu-address'}
-        //                          add1Class={'sub-menu-address1'}
-        //                          phoneClass={'sub-menu-phone'}
-        //                          emailClass={'sub-menu-email'}/>
-        //                 <Map loadingElementHeight={'100%'} mapElementHeight={'100%'} containerElementHeight={'300px'}/>
-        //             </div>
+        let contact = <div>
+                        <Address addClass={'sub-menu-address'}
+                                 add1Class={'sub-menu-address1'}
+                                 phoneClass={'sub-menu-phone'}
+                                 emailClass={'sub-menu-email'}/>
+                        <Map loadingElementHeight={'100%'} mapElementHeight={'100%'} containerElementHeight={'300px'}/>
+                    </div>
         return (
             <div>
                 <Row>
@@ -52,6 +52,7 @@ export default class MobileMenu extends React.PureComponent {
                 <div className={menuClass}>
                     <CollapsingCard cardClass={'mobile-menu-card'} title={'Information'} titleClass={'mobile-menu-title'} body={<InfoLinks menuClick={this.toggleMenu}/>}/>
                     <CollapsingCard cardClass={'mobile-menu-card'} title={'Programs'} titleClass={'mobile-menu-title'} body={<ProgramLinks menuClick={this.toggleMenu}/>}/>
+                    <CollapsingCard cardClass={'mobile-menu-card'} title={'Contact Us'} titleClass={'mobile-menu-title'} body={contact}/>
                 </div>
             </div>
         )
