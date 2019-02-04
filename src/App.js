@@ -12,7 +12,7 @@ const App = () => (
     <div className=" container">
         <Header />
         {renderRoutes(routes)}
-        {/*<Footer/>*/}
+        <Footer/>
     </div>
 );
 
