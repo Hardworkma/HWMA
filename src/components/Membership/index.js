@@ -24,8 +24,8 @@ export default class Membership extends React.PureComponent {
         let tab2 = (this.state.activeTab === '2') ? 'membership-tab-active active' : 'membership-tab'
         let tab3 = (this.state.activeTab === '3') ? 'membership-tab-active active' : 'membership-tab'
         return (
-            <div>
-                <Nav tabs>
+            <div className={'container'}>
+                <Nav tabs >
                     <NavItem>
                         <NavLink
                             className={tab1}
@@ -72,3 +72,22 @@ export default class Membership extends React.PureComponent {
         );
     }
 }
+
+{/*
+<TabContent activeTab={this.state.activeTab}>
+    <TabPane tabId="1">
+        <Row>
+            <iframe className={'sub-menu'}  src={'https://www.mystudio.academy/m/?=hwma/1988///1548287359'}></iframe>
+        </Row>
+    </TabPane>
+    <TabPane tabId="2">
+        <Row>
+            <iframe className={'sub-menu'}  src={'https://www.mystudio.academy/e/?=hwma/1988///1548287388'}></iframe>
+        </Row>
+    </TabPane>
+    <TabPane tabId="3">
+        <Row>
+            <iframe className={'sub-menu'}  src={'https://www.mystudio.academy/t/?=hwma/1988'}></iframe>
+        </Row>
+    </TabPane>
+</TabContent>*/}

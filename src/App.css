@@ -589,6 +589,10 @@ div.menu {
         margin-top: 0px;
         margin-bottom: 3%;
     }
+    .sub-menu {
+        top: 100%;
+
+    }
     .sub-menu-address {
         position: relative;
         left: 14%;

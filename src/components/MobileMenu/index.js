@@ -1,7 +1,6 @@
 import React from 'react';
-import {Container, Col, Row} from 'reactstrap'
+import {Row} from 'reactstrap'
 import CollapsingCard from "../CollapsingCard";
-import MenuItem from "../MenuItem";
 import Membership from '../Membership'
 import InfoLinks from "../InfoLinks";
 import ProgramLinks from "../ProgramLinks";
@@ -23,7 +22,7 @@ export default class MobileMenu extends React.PureComponent {
     }
 
     render() {
-        let menuClass = 'mobile-menu'
+        let menuClass = 'wrapper mobile-menu'
         let iconClass = 'mobile-menu-icon fa-2x'
         let menuText = ''
         if(this.state.toggleMenu) {
@@ -49,11 +48,12 @@ export default class MobileMenu extends React.PureComponent {
                         <i className={iconClass} ><span className={'mobile-menu-text'}>{menuText}</span></i>
                     </div>
                 </Row>
-                <div className={menuClass}>
+                <Row className={menuClass}>
+                    <CollapsingCard cardClass={'mobile-menu-card'} title={'Memberships'} titleClass={'mobile-menu-title'} body={<Membership menuClick={this.toggleMenu}/>}/>
                     <CollapsingCard cardClass={'mobile-menu-card'} title={'Information'} titleClass={'mobile-menu-title'} body={<InfoLinks menuClick={this.toggleMenu}/>}/>
                     <CollapsingCard cardClass={'mobile-menu-card'} title={'Programs'} titleClass={'mobile-menu-title'} body={<ProgramLinks menuClick={this.toggleMenu}/>}/>
                     <CollapsingCard cardClass={'mobile-menu-card'} title={'Contact Us'} titleClass={'mobile-menu-title'} body={contact}/>
-                </div>
+                </Row>
             </div>
         )
     }
