@@ -348,6 +348,38 @@ li.menu-item {
     color: white;
 }
 
+.schedule-day-row {
+    margin-bottom: 2%;
+    border-bottom: 1px solid #E75924;
+}
+
+.schedule-day-day {
+    display: flex;
+    align-items: center;  /*Aligns vertically center */
+    justify-content: center; /*Aligns horizontally center */
+}
+
+.schedule-day-title {
+    font-family: futura, Arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.schedule-day-type {
+    font-family: futura, Arial;
+    font-size: 18px;
+    color: black;
+}
+
+.schedule-class-shade {
+    background-color: #EBEBEB;
+}
+
+.schedule-class {
+    margin-bottom: 1.5%;
+}
+
 .social-link {
     height:30px;
     width:30px;

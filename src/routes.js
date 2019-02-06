@@ -11,7 +11,7 @@ import ReviewsPage from "./containers/ReviewsPage";
 import PhilosophyPage from "./containers/PhilosophyPage";
 import HardWorkHeroesPage from "./containers/HardWorkHeroesPage";
 import FAQPage from "./containers/FAQPage";
-import ThankYouPage from "./containers/ThankYouPage"
+import SchedulePage from "./containers/SchedulePage"
 import WhyPage from "./containers/WhyPage";
 import React from "react";
 
@@ -61,12 +61,12 @@ const routes = [
                 component: SideKicksPage
             },
             {
-                path: '/taekwondo/:age',
-                component: TaekwondoPage
+                path: '/schedule',
+                component: SchedulePage
             },
             {
-                path: '/thankyou',
-                component: ThankYouPage
+                path: '/taekwondo',
+                component: TaekwondoPage
             },
             {
                 path: '/welcome',
@@ -79,4 +79,5 @@ const routes = [
         ]
     }
 ];
+
 export default routes;

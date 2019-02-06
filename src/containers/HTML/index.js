@@ -56,3 +56,20 @@ export default HTML;
 
     {/*gtag('config', 'UA-128165463-1');*/}
 {/*</script>*/}
+
+{/*<meta name="keywords" content="Hard Work Martial Arts, HWMA, Virginia Martial Arts, Martial Arts,*/}
+            {/*Sterling, Tae Kown Do, Taekwondo, Northern Virginia Taekwondo, Norther*/}
+            {/*Virginia Martial Arts, After School, Sterling After school, sterling day*/}
+            {/*care, norther virginia day care, Hard Work tae kwon do, hardworkma*/}
+            {/*taekwondo, summer camp, spring camp, winter camp,Martial arts for children in Sterling VA, martial arts for adults in Sterling VA,*/}
+            {/*Summer Camps in Sterling VA, Taekwondo for kids in Sterling VA, Taekwondo for adults in Sterling VA, After School programs in Sterling VA,*/}
+            {/*Kung fu in Sterling VA, Women Fitness in Sterling VA, Summer camp in Sterling VA" />*/}
+{/*<meta name="description" content="Our goal is to bring out the best in*/}
+{/*our students through practicing martial arts. To teach that through hard*/}
+{/*work, goals can be accomplished, through determination progress can be*/}
+{/*made, with courage, fear can be overcome. Just as people grow throughout*/}
+{/*their lives, martial arts students grow throughout their training. It is*/}
+{/*a long path to black belt, and at HWMA we believe that rank progression*/}
+{/*is not solely based on physical ability, but students' mental*/}
+{/*progression as well. To bring out the best in both us and our students,*/}
+    {/*it is a path we walk together." />*/}
