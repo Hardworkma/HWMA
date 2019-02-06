@@ -20,15 +20,15 @@ export default class Membership extends React.PureComponent {
         }
     }
     render() {
-        let tab1 = (this.state.activeTab === '1') ? 'membership-tab-active' : 'membership-tab'
-        let tab2 = (this.state.activeTab === '2') ? 'membership-tab-active' : 'membership-tab'
-        let tab3 = (this.state.activeTab === '3') ? 'membership-tab-active' : 'membership-tab'
+        let tab1 = (this.state.activeTab === '1') ? 'membership-tab-active active' : 'membership-tab'
+        let tab2 = (this.state.activeTab === '2') ? 'membership-tab-active active' : 'membership-tab'
+        let tab3 = (this.state.activeTab === '3') ? 'membership-tab-active active' : 'membership-tab'
         return (
-            <div>
-                <Nav tabs>
+            <div className={'container'}>
+                <Nav tabs >
                     <NavItem>
                         <NavLink
-                            className={{ active: this.state.activeTab === '1' }}
+                            className={tab1}
                             onClick={() => { this.toggle('1'); }}
                         >
                             <span className={tab1}> Memberships</span>
@@ -36,7 +36,7 @@ export default class Membership extends React.PureComponent {
                     </NavItem>
                     <NavItem>
                         <NavLink
-                            className={{ active: this.state.activeTab === '2' }}
+                            className={tab2}
                             onClick={() => { this.toggle('2'); }}
                         >
                             <span className={tab2}> Events & Camps</span>
@@ -44,7 +44,7 @@ export default class Membership extends React.PureComponent {
                     </NavItem>
                     <NavItem>
                         <NavLink
-                            className={{ active: this.state.activeTab === '3' }}
+                            className={tab3}
                             onClick={() => { this.toggle('3'); }}
                         >
                             <span className={tab3}>Trial Options</span>
@@ -72,3 +72,22 @@ export default class Membership extends React.PureComponent {
         );
     }
 }
+
+{/*
+<TabContent activeTab={this.state.activeTab}>
+    <TabPane tabId="1">
+        <Row>
+            <iframe className={'sub-menu'}  src={'https://www.mystudio.academy/m/?=hwma/1988///1548287359'}></iframe>
+        </Row>
+    </TabPane>
+    <TabPane tabId="2">
+        <Row>
+            <iframe className={'sub-menu'}  src={'https://www.mystudio.academy/e/?=hwma/1988///1548287388'}></iframe>
+        </Row>
+    </TabPane>
+    <TabPane tabId="3">
+        <Row>
+            <iframe className={'sub-menu'}  src={'https://www.mystudio.academy/t/?=hwma/1988'}></iframe>
+        </Row>
+    </TabPane>
+</TabContent>*/}

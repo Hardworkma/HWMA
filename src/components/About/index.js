@@ -1,16 +1,17 @@
 import React from 'react';
-import {Container, Col, Row} from 'reactstrap'
+import { Row} from 'reactstrap'
 import Title from '../../components/Title/index';
 import CoreValues from "../CoreValues";
 import Philosophy from "../Philosophy";
+import {isMobile} from 'react-device-detect';
 
 export default class About extends React.PureComponent {
     render() {
-        let classes = (typeof(window) !== "undefined" && window.innerWidth < 400) ? 'card card-text' :  'card card-double card-text'
+        let classes = (isMobile && window.innerWidth < 480) ? 'card card-text' :  'card card-double card-text'
         return(
             <div>
                 <Row className={'wrapper'}>
-                    <div className={classes} style={{marginLeft:'2%'}}>
+                    <div className={classes}>
                         <Title title={'Core Values'}/>
                         <br/>
                         <CoreValues/>

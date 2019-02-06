@@ -1,6 +1,7 @@
 import React from 'react';
 import {Col, Row} from 'reactstrap'
 import { Link } from 'react-router-dom'
+import {isMobile} from 'react-device-detect';
 
 import Menu from '../Menu';
 import MobileMenu from '../MobileMenu'
@@ -9,7 +10,7 @@ import MobileMenu from '../MobileMenu'
 export default class Header extends React.PureComponent {
 
     render() {
-        let menu = (typeof(window) !== "undefined" && window.innerWidth <= 667) ? <MobileMenu /> : <Menu />
+        let menu = (isMobile) ? <MobileMenu /> : <Menu />
 
         return (
             <Row className={'header'}>

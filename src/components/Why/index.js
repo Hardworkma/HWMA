@@ -50,8 +50,8 @@ export default class Why extends React.PureComponent{
 
         return (
             <Container>
-                <Row>
-                    <img className={'why_hwma_img'} src={'https://s3.amazonaws.com/hwma-images/UsThem.png'} />
+                <Row className={'wrapper'}>
+                    <img id="us_vs_them" className={'why_hwma_img'} src={'https://s3.amazonaws.com/hwma-images/UsThem.png'} />
                 </Row>
                                 <br/>
                 <br/>
