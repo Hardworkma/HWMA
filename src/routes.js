@@ -66,7 +66,7 @@ const routes = [
                 component: SchedulePage
             },
             {
-                path: '/taekwondo',
+                path: '/taekwondo/:age',
                 component: TaekwondoPage
             },
             {
