@@ -8,7 +8,7 @@
 .logo {
     height: 140px;
     margin-top:10px;
-    margin-left:11%;
+    margin-left:-3%;
 }
 
 
@@ -70,17 +70,10 @@
 
 .container .container-center {
     position: absolute;
-
+    top: 65%;
     left: 75%;
     width: 45%;
     transform: translate(-50%, -50%);
-}
-
-#earn-it-header {
-    top: 50%;
-}
-#thank-you-header {
-    top: 65%;
 }
 
 .wrapper {
@@ -600,11 +593,10 @@ div.menu {
 @media (min-width: 480px) and (max-width: 767px)  {
 
 }
-/* all mobile devices != tablets*/
+/* all mobile devices  != tablets*/
 @media (min-width: 320px) and (max-width: 767px)  {
     .logo {
         width: 100%;
-        margin-left:-3%;
     }
     .hamburger {
         color: #E75924;
@@ -713,6 +705,69 @@ div.menu {
 
     .social-link-ig {
         left: 60%;
+    }
+}
+
+/*tablets*/
+@media (min-width: 768px) and (max-width: 1023px)  {
+    .mobile-menu {
+        background-color: #F9F9F9;
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        left: 10vw;
+        visibility: hidden;
+        opacity: 0;
+        margin-left: .5%;
+    }
+    .mobile-menu.is-active {
+        -webkit-transform: translate(-100vw);
+        -ms-transform: translate(-100vw);
+        transform: translate(-10vw);
+        visibility: visible;
+        opacity: 1;
+    }
+    .mobile-menu-card {
+        width: 95%;
+        margin-left: 1.5%;
+    }
+    .mobile-menu-title {
+        margin-left: 2%;
+    }
+
+    .card {
+        margin-top: 0px;
+        margin-bottom: 3%;
+    }
+
+    .card-middle {
+        width: 100%;
+    }
+    .card-right {
+        width: 100%;
+    }
+    .card-double {
+        width: 47%;
+        margin-right: 1.5%;
+        height: 800px;
+    }
+    #us_vs_them {
+        width: 100%;
+        height: 70%;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1100px)  {
+
+}
+
+/* all tablets */
+@media (min-width:768px) and (max-width: 1100px) {
+    .hamburger {
+        color: #E75924;
     }
 }
 
