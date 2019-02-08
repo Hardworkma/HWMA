@@ -7,7 +7,7 @@ export default class ThankYou extends React.PureComponent {
             <div id='blackbelt' className={'container'}>
                 <img id={'blackbelt-img'} src='https://s3.amazonaws.com/hwma-images/black_belt.jpg' alt={"black belt"}/>
                 <div className={'container-center '}>
-                    <span className={'blackbelt-header'}>Thank you for enrolling!</span>
+                    <span id={'thank-you-header'} className={'blackbelt-header'}>Thank you for enrolling!</span>
                     <br/>
                     <span className={'blackbelt-content'}>
                         To see your curriculum, class schedules, as well as keep in touch with us about special events,
