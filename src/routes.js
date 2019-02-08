@@ -12,6 +12,7 @@ import PhilosophyPage from "./containers/PhilosophyPage";
 import HardWorkHeroesPage from "./containers/HardWorkHeroesPage";
 import FAQPage from "./containers/FAQPage";
 import SchedulePage from "./containers/SchedulePage"
+import ThankyouPage from "./containers/ThankYouPage"
 import WhyPage from "./containers/WhyPage";
 import React from "react";
 
@@ -67,6 +68,10 @@ const routes = [
             {
                 path: '/taekwondo',
                 component: TaekwondoPage
+            },
+            {
+                path: '/thankyou',
+                component: ThankyouPage
             },
             {
                 path: '/welcome',

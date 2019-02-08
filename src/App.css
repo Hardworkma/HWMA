@@ -44,10 +44,23 @@
 #blackbelt.container {
     position: relative;
     text-align: center;
+    height: 225px;
+}
+
+.blackbelt-header {
     font-family: futura;
     font-size: 48px;
     color: white;
-    height: 225px;
+}
+.blackbelt-content{
+    font-family: futura;
+    font-size: 18px;
+    color: white;
+}
+.store-icon {
+    padding-left: 4%;
+    padding-right: 4%;
+    color: white;
 }
 
 #blackbelt-img {
@@ -57,8 +70,9 @@
 
 .container .container-center {
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 75%;
+    width: 45%;
     transform: translate(-50%, -50%);
 }
 
