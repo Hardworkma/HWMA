@@ -14,13 +14,12 @@ export default class Day extends React.PureComponent {
         })
         return (
             <Row className={'schedule-day-row'}>
-                <Col className={'col-2'} />
-                <Col className={'col-2 align-self-center'}>
+                <Col className={'col-5 align-self-center'}>
                     <span className={'schedule-day-title'}> {this.props.day.day}</span>
                     <br/>
                     <span className={'schedule-day-type'}> {this.props.day.type}</span>
                 </Col>
-                <Col className={'col-6'}>
+                <Col className={'col-7'}>
                     {classes}
                 </Col>
             </Row>
