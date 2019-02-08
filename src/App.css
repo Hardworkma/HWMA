@@ -604,6 +604,7 @@ div.menu {
 @media (min-width: 320px) and (max-width: 767px)  {
     .logo {
         width: 100%;
+        margin-left:-3%;
     }
     .hamburger {
         color: #E75924;
