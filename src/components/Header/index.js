@@ -10,7 +10,7 @@ import MobileMenu from '../MobileMenu'
 export default class Header extends React.PureComponent {
 
     render() {
-        let menu = (isMobile) ? <MobileMenu /> : <Menu />
+        let menu = (isMobile && (window !== undefined && window.innerWidth < 767)) ? <MobileMenu /> : <Menu />
 
         return (
             <Row className={'header'}>

@@ -8,7 +8,7 @@
 .logo {
     height: 140px;
     margin-top:10px;
-    margin-left:-3%;
+    margin-left:11%;
 }
 
 
@@ -70,10 +70,17 @@
 
 .container .container-center {
     position: absolute;
-    top: 65%;
+
     left: 75%;
     width: 45%;
     transform: translate(-50%, -50%);
+}
+
+#earn-it-header {
+    top: 50%;
+}
+#thank-you-header {
+    top: 65%;
 }
 
 .wrapper {
@@ -593,10 +600,11 @@ div.menu {
 @media (min-width: 480px) and (max-width: 767px)  {
 
 }
-/* all mobile devices */
+/* all mobile devices != tablets*/
 @media (min-width: 320px) and (max-width: 767px)  {
     .logo {
         width: 100%;
+        margin-left:-3%;
     }
     .hamburger {
         color: #E75924;
