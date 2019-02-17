@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import fetchJsonp from 'fetch-jsonp';
 import Slider from "react-slick";
 import Lightbox from 'react-images';
 import Image from './image'
@@ -33,10 +34,8 @@ export default class Instagram extends React.PureComponent {
             .catch(err => console.log(err));
     }
     fetchPhotos = async function (endpoint) {
-        const response = await fetch(endpoint);
+        const response = await fetchJsonp(endpoint);
         const body = await response.json();
-
-        if (response.status !== 200) throw Error(body.message);
 
         return body;
     }
